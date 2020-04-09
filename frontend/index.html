@@ -8,32 +8,74 @@
 </head>
 
 <body>
-    <div id="container">
+    <div class="container">
         <div></div>
-        <section id="login">
+        <section class="login">
 
-            <div id="login">
+            <div class="content">
                 <h1>Login</h1>
 
-                <form action="">
-                    <fieldset>
-                        <input type="text" placeholder="Username" maxlength="20">
-                    </fieldset>
+                <div class="form">
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="Username" maxlength="20">
+                        </fieldset>
 
-                    <fieldset>
-                        <input type="password" placeholder="Senha" maxlength="15">
-                    </fieldset>
+                        <fieldset>
+                            <input type="password" placeholder="Senha" maxlength="15">
+                        </fieldset>
+                    </form>
+                </div>
 
-                    <div id="botoes">
-                        <button class="btn-criar" onclick="onOff()">Criar Conta</button>
-                        <a class="btn-entrar" href="inicio.html">Entrar</a>
-                    </div>
-                </form>
-            </div>
-        </section>
+                <button onclick="onOff()" class="btn-criar">Criar Conta</button>
+                <a class="btn-entrar" href="inicio.html">Entrar</a>
 
+        </section>        
     </div>
 
+    <!-- Modal do Cadastro -->
+    
+    <div id="modal" class="hide">
+        <div id="form">
+            <div class="cadastro">
+                <h1>Cadastre-se:</h1>
+                <form action="">
+
+                    <fieldset class="campo">
+                        <label for="nome">Primeiro Nome:</label>
+                        <input type="text" name="nome" required>
+                    </fieldset>
+
+                    <fieldset class="campo">    
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" name="sobrenome">
+                    </fieldset>
+
+                    <fieldset class="campo">    
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                    </fieldset>
+
+                    <fieldset class="campo">    
+                        <label for="senha">Crie uma senha:</label>
+                        <input type="text" name="senha" required>
+                    </fieldset>
+
+                    <fieldset class="campo">    
+                        <label for="csenha">Confirme sua senha:</label>
+                        <input type="text" name="csenha" required>
+                    </fieldset>
+                
+                </form>
+
+                <div id="btn">
+                    <a class="btn-cadastro" href="inicio.html">Cadastrar</a>
+                    <a href="#" onclick="onOff()" class="btn-voltar">Voltar para Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

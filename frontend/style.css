@@ -1,15 +1,17 @@
+/* Global*/
+
 /*Verde #00958E
 azul escuro #0387A5
 azul medio #469DC2 #87BFD8
-azul claro #B8D9E8
+azul claro #B8D9E8*/
 
-/* Global*/
-
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+}
+
+body {
     background-color: rgb(223, 223, 223);
 }
 
@@ -17,7 +19,13 @@ li {
     list-style: none;
 }
 
-/* Topo da página */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #00958E;
+}
+/* Topo da Pagina */
 
 a .logo {
     width: 200px;
@@ -31,6 +39,7 @@ a .logo {
     background-position: center;
     background-attachment: fixed;
     height: 80vh;
+
 }
 
 #topo header {
@@ -49,11 +58,11 @@ a .logo {
 .search-box {
     position: fixed;
     right: 150px;   
-    margin-right: 100px;
+    margin-right: 100px; 
     background-color: #00958E;
-    height: 35px;
+    height: 39px;
     border-radius: 40px;
-    padding: 3px;
+    padding: 2px;
 }
 
 .search-box:hover > .search-txt{
@@ -83,17 +92,16 @@ a .logo {
     outline: none;
     float: left;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     transition: 0.3s;
-    line-height: 35px;
+    line-height: 39px;
     width: 0;
 }
 
 .identifier {
     display: flex;
     margin-right: 50px;
-    padding: 16px 25px;
-    
+    padding: 16px 25px; 
 }
 
 .identifier:hover {
@@ -108,7 +116,9 @@ a .logo {
 }
 
 .identifier p {
-    margin-left: 10px;
+    margin-left: 14px;  
+    display: flex;
+    align-items: center; 
 }
 
 .topo-footer {
@@ -128,19 +138,7 @@ a .logo {
     max-width: 40%;
 }
 
-.topo-footer a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-
-
-.principal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-}
-
+/* Parte da Compra */
 #compra {
     background-color: white; 
     max-width: 43%;
@@ -149,8 +147,7 @@ a .logo {
     border-radius: 5px;
 }
 
-#compra p {
-    
+#compra p {  
     font-size: 25pt;
     text-align: center;
 }
@@ -161,9 +158,145 @@ a .logo {
     background-color: rgb(247, 247, 247);;
     border-radius: 5px;
     border: 2px solid #00958E;
-    line-height: 21px;    
-     
+    line-height: 21px;        
 }
+
+/* Contedo */
+
+.rota {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh;
+    border: #00958E 2px solid;
+    border-right: none;
+}
+
+.mapa img {
+    max-width: 700px;
+    max-height: 100%;
+}
+
+.mapa img:hover {
+    max-width: 700px;
+}
+
+.info {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 16pt;
+    max-height: 335px;
+}
+
+
+
+
+
+
+
+
+
+.content {
+    margin-top: 60px;
+    width: 93%;
+    margin: auto;
+}
+
+
+main {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    margin-top: 60px;
+    height: auto;
+}
+
+main:active {
+    box-shadow: none;
+}
+
+main img {
+    max-width: 300px;
+}
+
+.image {  
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms;
+}
+
+.description {   
+    font-size: 14pt;
+    padding: 25px;
+}
+
+.description h1 {
+    color: #0387A5;
+    padding: 0 0 25px 15px
+}
+.description a{
+    text-decoration: none;
+    color: #00958E;
+}
+
+.description a:hover {
+    font-weight: bold;
+}
+
+#back {
+    margin: 50px 0;
+    height: 250px;
+    background-image: url("images/vagao.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.back-compra {
+    margin: auto;
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.26);
+    color: white;
+    font-size: 16pt;
+    line-height: 40px;
+}
+.back-compra button {
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: #0387A5;
+    padding: 10px;
+}
+
+
+
+
+
+footer img {    
+    width: 100%;
+    max-height: 130px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #201E1E;
+    color: white;
+    height: 300px;
+}
+    
+
+
+
+
+
 
 
 
