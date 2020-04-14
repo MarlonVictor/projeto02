@@ -9,10 +9,12 @@ azul claro #B8D9E8*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: rgb(223, 223, 223);
+    font-family: 'Roboto', sans-serif;
 }
 
 li {
@@ -22,9 +24,23 @@ li {
 ::-webkit-scrollbar {
     width: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #00958E;
 }
+
+.search-btn .fas {
+    margin: 0;
+    color: rgb(158, 158, 158);
+}
+
+.fas {
+    color: #00958E;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
 /* Topo da Pagina */
 
 a .logo {
@@ -57,7 +73,7 @@ a .logo {
 
 .search-box {
     position: fixed;
-    right: 150px;   
+    right: 160px;   
     margin-right: 100px; 
     background-color: #00958E;
     height: 39px;
@@ -98,15 +114,17 @@ a .logo {
     width: 0;
 }
 
+/* Minha conta */
 .identifier {
     display: flex;
     margin-right: 50px;
     padding: 16px 25px; 
+    transition: 200ms;
 }
 
 .identifier:hover {
     cursor: pointer;
-    background-color: #00958E;
+    background-color: rgb(0, 134, 128);
     color: white;
 }
 
@@ -121,6 +139,35 @@ a .logo {
     align-items: center; 
 }
 
+.tooltip {
+    visibility: hidden;
+    background-color: #00958E;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    margin-top: 57px;            
+    min-width: 197px;
+}
+
+.tooltip a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 12pt;
+    font-weight: 500;
+    border-top: 1px solid white;
+}
+.tooltip a:hover {
+    background-color: rgb(0, 134, 128);
+}
+
+.identifier:hover .tooltip {
+    visibility: visible;
+}
+
+/* Atalhos */
 .topo-footer {
     margin-top: 74px;
     background-color: #00958E;
@@ -134,35 +181,65 @@ a .logo {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     max-width: 40%;
 }
 
 /* Parte da Compra */
 #compra {
-    background-color: white; 
-    max-width: 43%;
-    height: 470px;
+    width: 43%;
+    background-color: #0387A5;
     margin: 50px 0 0 50px;
-    border-radius: 5px;
+    height: 470px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
 }
 
-#compra p {  
-    font-size: 25pt;
-    text-align: center;
+#compra .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#compra .input {
+    max-width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 3px;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
 }
 
 #compra input {
-    padding: 20px 100px 0;    
-    margin: 0 0 20px 100px  ;
-    background-color: rgb(247, 247, 247);;
-    border-radius: 5px;
-    border: 2px solid #00958E;
-    line-height: 21px;        
+    padding: 15px;
+    width: 90%;
+    border:none;
+    line-height: 15pt;
+    outline: none;
+    font-size: 12pt;
+}
+
+#compra .quant {
+    padding: 30px;
+    width: 450px;
+}
+
+#compra button {   
+    margin: 20px auto 0;
+    padding: 10px;
+    width: 300px;
+    font-size: 16pt;
+    font-weight: 700;
+    color: white;
+    background-color: #00958E;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    cursor: pointer;
+    outline: none;
 }
 
 /* Contedo */
-
 .rota {
     margin: 60px 0;
     display: grid;
@@ -188,14 +265,6 @@ a .logo {
     font-size: 16pt;
     max-height: 335px;
 }
-
-
-
-
-
-
-
-
 
 .content {
     margin-top: 60px;
@@ -228,31 +297,47 @@ main img {
     transition: 200ms;
 }
 
-.description {   
+.description {  
     font-size: 14pt;
     padding: 25px;
+    text-align: justify;
 }
 
 .description h1 {
     color: #0387A5;
-    padding: 0 0 25px 15px
+    padding-bottom: 25px;
 }
+
+.description p {
+    text-indent: 30px;
+    font-size: 14pt;
+    font-weight: 400;
+    color: #201E1E;
+}
+
 .description a{
     text-decoration: none;
     color: #00958E;
-}
-
-.description a:hover {
     font-weight: bold;
 }
 
+.description a:hover .fas{
+    margin-left: 20px;
+    transition: 300ms;
+}
+
 #back {
-    margin: 50px 0;
+    margin: 60px 0;
     height: 250px;
     background-image: url("images/vagao.jpg");
-    background-size: cover;
+    background-size: 102%;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;   
+    transition: 400ms;
+}
+
+#back:hover {
+    background-size: 100%;
 }
 
 .back-compra {
@@ -260,11 +345,11 @@ main img {
     width: 100%;
     padding: 60px 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.26);
     color: white;
     font-size: 16pt;
     line-height: 40px;
 }
+
 .back-compra button {
     margin-top: 15px;
     border: none;
@@ -276,13 +361,9 @@ main img {
     padding: 10px;
 }
 
-
-
-
-
 footer img {    
     width: 100%;
-    max-height: 130px;
+    max-height: 100px;
 }
 
 footer {
