@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login - Walkpass</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <main class="content">
+            <h1>Login</h1>
+            <div id="login">
+
+                <!-- Login -->
+                <form action="">
+                    <fieldset>
+                        <input type="text" placeholder="Username" maxlength="20">
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="password" placeholder="Senha" maxlength="12">
+                    </fieldset>
+                </form>
+
+                <div class="btn">
+                    <button onclick="onOff()">Criar Conta</button>
+                    <button onclick="window.location.href = 'inicio.html'" class="btn-green">Entrar</button>
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <!-- Cadastro -->
+
+    <div id="modal" class="hide">
+        <div id="form">
+            <div class="cadastro">
+                <h1>Cadastre-se:</h1>
+
+                <form action="">
+                    <fieldset class="campo">
+                        <label for="nome">Primeiro Nome:</label>
+                        <input type="text" name="nome" maxlength="10" required>
+                    </fieldset>
+
+                    <fieldset class="campo">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" name="sobrenome" maxlength="10">
+                    </fieldset>
+
+                    <fieldset class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                    </fieldset>
+
+                    <fieldset class="campo">
+                        <label for="senha">Crie uma senha:</label>
+                        <input type="text" name="senha" maxlength="12" required>
+                    </fieldset>
+
+                    <fieldset class="campo">
+                        <label for="csenha">Confirme sua senha:</label>
+                        <input type="text" name="csenha" maxlength="12" required>
+                    </fieldset>
+
+                    <div class="btn">
+                        <button onclick="window.location.href = 'inicio.html'" class="btn-green">Cadastrar</button>
+                        <button onclick="window.location.href = 'index.html'" class="btn-grey">Voltar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

@@ -1,3 +1,5 @@
+// btn de cadastro
+
 function onOff(){
     document
         .querySelector("#modal")
