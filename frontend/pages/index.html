@@ -6,32 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login - Walkpass</title>
+
+   
 </head>
 
-<body>
 
+<body>
+   
     <section class="container">
         <main class="content">
             <h1>Login</h1>
             <div id="login">
 
                 <!-- Login -->
-                <form action="">
+                <form name=login>
                     <fieldset>
-                        <input type="text" placeholder="Username" maxlength="20">
+                        <input type="text" name=username placeholder="Username" maxlength="20">
                     </fieldset>
 
                     <fieldset>
-                        <input type="password" placeholder="Senha" maxlength="12">
+                        <input type="password" name=password placeholder="Senha" maxlength="12">
                     </fieldset>
+               
                 </form>
-
                 <div class="btn">
-                    <button onclick="onOff()">Criar Conta</button>
-                    <button onclick="window.location.href = 'inicio.html'" class="btn-green">Entrar</button>
-                </div>
-
+               
+                    <input type=button value="Criar Conta" onClick="onOff()">
+                    <input type=button value="Entrar"  onClick="Login()">             
+                   </div>
+         
             </div>
+
+            <script src="login.js"></script>
         </main>
     </section>
 
