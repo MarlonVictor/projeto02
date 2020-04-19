@@ -5,39 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
-    <title>Login - Walkpass</title>
-
-   
+    <title>Login - Walkpass</title> 
 </head>
 
 
-<body>
+<body> 
    
     <section class="container">
+
+        <div id="sobre">
+            <img src="../images/logo.png">
+            <p>Sistema desenvolvido com a finalidade de agilizar a venda dos bilhetes,
+            reduzir a super lotação nos vagãos e diminuir o tempo gasto dentro do mesmo.</p>
+        </div>
+
+    <!-- Login -->
         <main class="content">
             <h1>Login</h1>
             <div id="login">
-
-                <!-- Login -->
+                
                 <form name=login>
                     <fieldset>
-                        <input type="text" name=username placeholder="Username" maxlength="20">
+                        <input type="text" id=username placeholder="Username" maxlength="20">
                     </fieldset>
 
                     <fieldset>
-                        <input type="password" name=password placeholder="Senha" maxlength="12">
-                    </fieldset>
-               
+                        <input type="password" id=password placeholder="Senha" maxlength="12">
+                    </fieldset>               
                 </form>
-                <div class="btn">
-               
-                    <input type=button value="Criar Conta" onClick="onOff()">
-                    <input type=button value="Entrar"  onClick="Login()">             
-                   </div>
-         
-            </div>
 
-            <script src="login.js"></script>
+                <div class="btn">               
+                    <button onclick="onOff()">Criar Conta</button>             
+                    <button onclick="Login()" class="btn-green">Entrar</button>             
+                </div>                
+            </div>    
         </main>
     </section>
 
