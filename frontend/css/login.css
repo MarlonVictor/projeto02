@@ -53,6 +53,29 @@ label {
     font-size: 1rem;
 }
 
+#sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: auto;
+    height: 150px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+#sobre img {
+    width: 240px;
+    height: 90px;
+}
+
+#sobre p {
+    font-size: 20px;
+    text-align: center;
+    padding:10px 0 0 30px;
+    color: white;
+}
+
 /* Login */
 
 .container {
@@ -130,8 +153,35 @@ label {
     visibility: hidden;
 }
 
-/* Resposividade */
-@media (max-width: 720px) {
+/* Sobre */
+@media (max-width: 1120px) {   
+    #sobre p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 970px) {
+    #sobre img {
+        width: 220px;
+        height: 70px;
+    }
+    #sobre p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 790px) {   
+    #sobre img {
+        width: 200px;
+        height: 50px;
+    }
+    #sobre p {
+        font-size: 13px;
+    }
+}
+
+/* Login */
+@media (max-width: 740px) {
     .btn-grey { 
         margin-right: 5px; 
     }
@@ -153,6 +203,11 @@ label {
         position: relative; 
         bottom: 80px; 
         font-size: 1rem;
+    }
+    #sobre {
+        display: none;
+        position: relative;
+        bottom: 80px;
     }
 
 /* Cadastro */
