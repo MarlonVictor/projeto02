@@ -114,6 +114,17 @@ label {
     color: white;
 }
 
+#show {
+    position: relative;
+    margin-left: 87%;
+    bottom: 52px;
+    height: 22px;
+    width: 22px;
+    background-image: url(https://image.flaticon.com/icons/svg/709/709612.svg);
+    background-repeat: no-repeat;
+    cursor: pointer; 
+}
+
 /* Cadastro */
 
 #modal { /*Fundo esbranquiçado*/
@@ -168,6 +179,9 @@ label {
     #sobre p {
         font-size: 14px;
     }
+    #show {
+        margin-left: 83%;
+    }
 }
 
 @media (max-width: 790px) {   
@@ -203,6 +217,10 @@ label {
         position: relative; 
         bottom: 80px; 
         font-size: 1rem;
+    }
+    #show {
+        bottom: 132px;
+        margin-left: 83%;
     }
     #sobre {
         display: none;

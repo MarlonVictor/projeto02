@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Estações - WalkPass</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+
+        <nav>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="search" placeholder=" Pesquisar">
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+
+            <div class="menu">
+                <img src="../images/rosto.jpg">
+                <p>Minha Conta</p>
+                <span class="tooltip">
+                    <a href="">Editar</a>
+                    <a href="">Configurações</a>
+                    <a href="">Ultimas compras</a>
+                    <a href="index.html">Sair</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <div id="top-nav">
+        <a href="inicio.html">Home</a>
+    </div>
+
+    <div class="banner">
+        <img src="../images/banner-estacoes.jpg">
+        <p>RAMAL SARACURUNA</p>
+        <h2>Conheça as Estações:</h2>
+    </div>
+
+    <div id="pag2">
+        <div class="estacoes">
+
+            <div class="title">
+                <h2 id="sense">Sentido: Saracuruna (20 pontos) </h2>
+                <button onclick="change()">Trocar Sentido</button>
+            </div>
+
+            <div class="line">
+                <ul id="lista">
+                    <li>
+                        <h3>Central Do Brasil <i class="fas fa-chevron-down"></i></h3>
+                        <p>Praça Cristiano Ottoni, s/n Centro - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Central+do+Brasil/@-22.9037662,-43.1935962,17z/data=!4m5!3m4!1s0x997f6af7f7a363:0xc6f0266cc82c07e4!8m2!3d-22.9034482!4d-43.1916037"" target="
+                                _blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>São Cristóvão <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Bartolomeu de Gusmão, s/n São Cristóvão - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+De+S%C3%A3o+Crist%C3%B3v%C3%A3o/@-22.9097161,-43.2210652,17z/data=!4m5!3m4!1s0x997ef8034e97b7:0x2efdfb7f70056635!8m2!3d-22.9095607!4d-43.2227945"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Maracanã <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Presidente Castelo Branco, s/n Maracanã - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+Maracan%C3%A3/@-22.9098695,-43.2346237,17z/data=!4m5!3m4!1s0x997fccda25d98b:0x247eb16101ff027c!8m2!3d-22.9097139!4d-43.234047"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Triagem <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Francisco Manoel, s/n Triagem - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Triagem/@-22.8961943,-43.2445574,17z/data=!4m5!3m4!1s0x997e85b97f96f3:0x531ceaf1ecfbb061!8m2!3d-22.8962526!4d-43.244869"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Manguinhos <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Leopoldo Bulhões, s/n Manguinhos - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+Manguinhos/@-22.8803258,-43.2505652,17z/data=!4m5!3m4!1s0x997ea0906703ff:0xb3add775f83a5afc!8m2!3d-22.8796596!4d-43.2508631"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Bonsucesso <i class="fas fa-chevron-down"></i></h3>
+                        <p>Praça das Nações, s/n Bonsucesso - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Bonsucesso/@-22.8692841,-43.2553825,17z/data=!4m5!3m4!1s0x997c03c0574d69:0x6bfda0933b9eea25!8m2!3d-22.8675379!4d-43.2552472"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Ramos <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Uranos, s/n Ramos - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Ramos/@-22.8563658,-43.2595471,17z/data=!4m5!3m4!1s0x997bf99ea6e07b:0x3bf0a612d4a7adbf!8m2!3d-22.8551284!4d-43.260051"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Olaria <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Etelvina, s/n Olaria - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Olaria/@-22.8480807,-43.2657806,17z/data=!4m5!3m4!1s0x997bee08db2029:0x8dd765dce92fd496!8m2!3d-22.8473772!4d-43.266204"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Penha <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua José Maurício, s/n Penha - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Penha/@-22.84077,-43.2771544,17z/data=!4m5!3m4!1s0x997b911fc881a7:0xd817afe48bb68f62!8m2!3d-22.8402336!4d-43.2785797"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Penha Circular <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Lobo Junior, s/n Penha Circular - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Penha+Circular/@-22.8348392,-43.2878538,17z/data=!4m5!3m4!1s0x997b995a1f3b85:0x65cb084ab368b6b7!8m2!3d-22.8366283!4d-43.2851062"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Brás de Pina <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Itabira, s/n Bras de Pina - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Br%C3%A1s+de+Pina/@-22.8323474,-43.2915445,17z/data=!4m5!3m4!1s0x997b74df53707f:0x6bbf476d4c88f919!8m2!3d-22.830442!4d-43.2929463"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Cordovil <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Itabira, s/n Cordovil - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Cordovil/@-22.8249228,-43.2959958,17z/data=!4m5!3m4!1s0x997b0c02f4b283:0xbe2cf6f068bac742!8m2!3d-22.823792!4d-43.2960241"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Parada de Lucas <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Bulhões Marcial, s/n Parada de Lucas - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+Parada+de+Lucas/@-22.8177731,-43.3002766,17z/data=!4m5!3m4!1s0x997b1ab406c12b:0xc7bdaff65a279e98!8m2!3d-22.8162448!4d-43.3007703"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Vigário Geral <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Bulhões Marcial, s/n Vigário Geral - Rio de Janeiro <a
+                                href="https://www.google.com.br/maps/place/Vig%C3%A1rio+Geral/@-22.8047582,-43.3056517,17z/data=!4m5!3m4!1s0x0:0xf86fcb8bbc326bed!8m2!3d-22.8055595!4d-43.3054139"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Duque De Caxias <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Presidente Vargas, s/n Duque de Caxias - Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Duque+de+Caxias/@-22.7848349,-43.310148,17z/data=!4m5!3m4!1s0x997aea9b335913:0xb700bfb16563fc83!8m2!3d-22.7871509!4d-43.3094935"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Corte Oito <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Grajaú, esquina com a Av. Jacatirão, s/n Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+Corte+8/@-22.7716586,-43.3062749,17z/data=!4m5!3m4!1s0x997a9934fed0fd:0xd1815bdc116b7259!8m2!3d-22.7709385!4d-43.306177"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Gramacho <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Presidente Kennedy, s/n Gramacho - Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Gramacho/@-22.7521787,-43.3041506,17z/data=!4m5!3m4!1s0x997069a7be9503:0x44ccb71c51a6ea15!8m2!3d-22.7516261!4d-43.3042364"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Campos Elíseos <i class="fas fa-chevron-down"></i></h3>
+                        <p>Rua Luis de Camões, s/n Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Campos+El%C3%ADseos/@-22.7080212,-43.2817384,16z/data=!4m5!3m4!1s0x9971634e7bc835:0x9e135cbdeeef2836!8m2!3d-22.7040208!4d-43.2807925"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Jardim Primavera <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Marquês de Baependi, s/n Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Jardim+Primavera/@-22.6909772,-43.2637783,16z/data=!4m5!3m4!1s0x9973ed91f011eb:0x5a8cb7d04eae2f1a!8m2!3d-22.6902094!4d-43.2624489"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>Saracuruna <i class="fas fa-chevron-down"></i></h3>
+                        <p>Av. Nelson Mauro, s/n Saracuruna - Duque de Caxias <a
+                                href="https://www.google.com.br/maps/place/Esta%C3%A7%C3%A3o+De+Saracuruna/@-22.6767189,-43.2477376,16z/data=!4m5!3m4!1s0x0:0x41f3361b9226b346!8m2!3d-22.6776019!4d-43.2475667"
+                                target="_blanck"><i class="fas fa-map-marker-alt"></i></a></p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <aside>
+
+            <div class="tabela">
+                <p style="font-size: 18px;">A linha Ramal Saracuruna de trem tem 20 estações partindo de Saracuruna e
+                    terminando na Central do Brasil.</p>
+
+                <p><strong>A grade horária da próxima semana:</strong> Começa a operar às 06:00 e termina às 18:40. <br>
+                    <strong>Dias de operação durante a semana:</strong> Todos os dias. <br>
+                    <strong>Tempo médio de viagem:</strong> 50 minutos <br>
+                    <strong>Média de passageiros:</strong> x pessoas</p>
+
+                <table>
+                    <tr>
+                        <th>Dia</th>
+                        <th class="right">Horário de operação</th>
+                    </tr>
+                    <tr class="gray">
+                        <td>Domingo</td>
+                        <td class="right">04:53 - 19:33</td>
+                    </tr>
+                    <tr>
+                        <td>Segunda-feira</td>
+                        <td class="right">04:16 - 21:59</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>Terça-feira</td>
+                        <td class="right">04:16 - 21:59</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-feira</td>
+                        <td class="right">04:16 - 21:59</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>Quinta-feira</td>
+                        <td class="right">04:16 - 21:59</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-feira</td>
+                        <td class="right">04:16 - 21:59</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>Sábado</td>
+                        <td class="right">04:19 - 21:01</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <img class="line" src="../images/footer.png">
+        <img class="logo" src="../images/logo (2).png" alt="Logo">
+
+        <div class="sobre">
+            <h3>Sobre o sistema:</h3>
+            <p>Sistema desenvolvido com a finalidade de agilizar a venda dos bilhetes,
+                reduzir a super lotação nos vagãos e diminuir o tempo gasto dentro do mesmo.
+            </p>
+        </div>
+
+        <div class="social">
+            <h3>Social:</h3>
+            <p>Marlon Victor <a href="https://github.com/MarlonVictor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marlon-victor-2548b51a2/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a></p>
+            <hr>
+            <p>Marlon Victor <a href="https://github.com/MarlonVictor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marlon-victor-2548b51a2/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a></p>
+        </div>
+        <address>
+            <hr>&copy; 2020 - Walkpass &nbsp; Todos Direitos Reservados.
+        </address>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
