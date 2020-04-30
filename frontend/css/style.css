@@ -48,7 +48,7 @@ strong {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 550px;
+    height: 85vh;
 }
 
 /* Header */
@@ -184,6 +184,7 @@ header a img {
     background-color: #0387A5;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    position: absolute;
 }
 
 #buy .content {
@@ -208,12 +209,72 @@ header a img {
     outline: none;
 }
 
-.input .passagem {
-    padding: 35px; 
+.ticket-checkbox {
+    margin: 10px auto;
+    width: 79%;
+    border-radius: 10px;
+    padding: 4.7%;
+    font-size: 12px;
+    background-color: white;
 }
 
-#buy button {   
-    margin: 1% auto 4%;
+.ticket-title {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ticket-title:after {
+    content: '+';
+    float: right;
+    transition: 200ms;
+}
+
+.ticket-opc {
+    padding: 15px;
+    margin-top: 5px;
+    background-color: rgb(231, 230, 230);
+    border-radius: 5px;
+    display: none;
+}
+
+.numero {
+    width: 25%;
+    background-color: #201E1E;
+    float: right;
+    position: relative;
+    padding: 1px;
+}
+
+.trigger-ticket {
+    display: none; 
+}
+
+.trigger-ticket:checked + .trigger-wrapper .ticket-title:after {
+    transform: rotate(45deg) scale(1.10);
+}
+
+.trigger-ticket:checked + .trigger-wrapper .ticket-opc {
+    display: block;
+}
+
+.trigger-ticket:checked + .trigger-wrapper #ticket-confirm {
+    display: block;
+}
+
+#ticket-confirm {
+    margin: auto;
+    position: relative;
+    top: 10px;
+    background-color: rgb(231, 230, 230);
+    padding: 3% 7%;
+    border-radius: 10px;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+}
+
+button#item1 {
+    margin: 2% auto 4%;
     padding: 2%;
     width: 50%;
     font-size: 20px;
@@ -516,7 +577,7 @@ hr {
 
 .estacoes .line li:hover p{
     visibility: visible;
-    transition-duration: 200ms
+    transition: 200ms
 }
 
 .estacoes .line h3 i {
@@ -652,7 +713,7 @@ footer .line button{
         width: 150px;
     }
     #buy {
-        margin: 3% auto;
+        margin: 3% 10%;
         width: 80%;
     }
     #fundo-vantagem, .item-1, .item-2, .item-3 {

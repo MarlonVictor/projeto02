@@ -23,8 +23,8 @@ function Login() {
 // btn da senha
 
 function showPassword() {
-    var show = document.getElementById("password");
-    var change = document.querySelector("#show");
+    const show = document.getElementById("password");
+          change = document.querySelector("#show");
 
     if (show.type === "password") {
       show.type = "text";
@@ -39,16 +39,16 @@ function showPassword() {
 // btn de trocar sentido
 
 function change() {
-  var ul = document.getElementById("lista");
-  var sentido = document.getElementById("sense")
+  const ul = document.getElementById("lista");
+        sentido = document.getElementById("sense");
 
   if (ul.classList == 0 ) {
-    ul.classList.add("reverse")
+    ul.classList.add("reverse");
     sentido.innerHTML = "Sentido: Central do Brasil (20 pontos)"
   }
   else {
     ul.classList == "reverse";
-    ul.classList.remove("reverse")
+    ul.classList.remove("reverse");
     sentido.innerHTML = "Sentido: Saracuruna (20 pontos)"
   }
 }

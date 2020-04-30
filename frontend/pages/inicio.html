@@ -13,7 +13,7 @@
     <title>WalkPass</title>
 </head>
 
-<body onload="Login()">
+<body>
     <div id="container-top">
 
         <header>
@@ -42,7 +42,7 @@
 
         <div id="top-nav">
             <a href="#item1">Estações</a>
-            <a href="#item2">Vagões</a>
+            <a href="#item2">Rewards</a>
             <a href="#item3">Quem Somos</a>
         </div>
 
@@ -81,20 +81,55 @@
                 </div>
 
                 <div class="input">
-                    <i class="fas fa-long-arrow-alt-right"></i><input type="datetime" placeholder="ida">
+                    <i class="fas fa-long-arrow-alt-right"></i><input type="date" placeholder="ida">
                     <i class="fas fa-long-arrow-alt-left"></i><input type="datetime" placeholder="volta  (opcional)">
                 </div>
-                <div class="input">
-                    <div class="passagem">
-                        <p>1 adulto</p>
-                        <p>Adicionar um cartão de cliente ou desconto</p>
+
+                <div class="ticket-checkbox">
+                    <input type="checkbox" class="trigger-ticket" id="faq-titulo-1">
+
+                    <div class="trigger-wrapper">
+                        <label for="faq-titulo-1">
+                            <h2 class="ticket-title">1 bilhete - adulto</h2>
+                        </label>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="1">
+                            </div>
+                            <p><h3>Adulto</h3></p>
+                            <p>18-64 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0">
+                            </div>
+                            <p><h3>Jovem</h3></p>
+                            <p>12-17 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0">
+                            </div>
+                            <p><h3>Criança</h3></p>
+                            <p>0-11 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0">
+                            </div>
+                            <p><h3>Idoso</h3></p>
+                            <p>65+ anos (grátis)</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <p>As crianças podem viajar de graça no colo de um adulto e só precisam de um passaporte. Você pode levar apenas um bebê por adulto.</p>
+                        </div>
+
+                        <button id="ticket-confirm">confirmar</button>
                     </div>
-                </div>
+                </div>      
 
                 <button id="item1">Procurar</button>
             </div>
-
-
         </section>
 
         <!-- Carrossel -->
@@ -105,7 +140,7 @@
                 <div class="item-1">
                     <img src="https://image.flaticon.com/icons/svg/1598/1598196.svg">
                     <h3>O caminho mais ecológico a seguir</h3>
-                    <p>Reduza sua pegada de carbono pela cidade</p>
+                    <p>Reduza seu rastro de carbono pela cidade</p>
                 </div>
                 <div class="item-2">
                     <img src="https://image.flaticon.com/icons/svg/533/533490.svg">
@@ -115,7 +150,7 @@
                 <div class="item-3">
                     <img src="https://image.flaticon.com/icons/svg/2088/2088617.svg">
                     <h3>Aproveite ao máximo o seu tempo de viagem</h3>
-                    <p>Chegue ao seu destino sem perder tempo em trânsito</p>
+                    <p>Chegue ao seu destino sem perder tempo no trânsito</p>
                 </div>
             </main>
         </div>
@@ -146,14 +181,11 @@
             <img src="../images/tiket.jpg">
 
             <div class="description">
-                <h1>Passe</h1>
-                <p>O Passe é uma forma mais pratica para o seu dia a dia. Compre um passe agora e faça quantas viagens
-                    quiser! <br><br>
-                    <strong>Opções:</strong><br>
-                    Pass semanal<br>
-                    Pass mensal<br><br>
+                <h1>Rewards</h1>
+                <p>Aqui você pode acompanhar sua pontuação! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet, inventore debitis doloribus accusamus reprehenderit?<br><br>
+                    <strong>Sua pontuação atual é:&nbsp;&nbsp; 70</strong></p><br><br>
 
-                    <a href="#">Saiba mais<i class="fas fa-arrow-right"></i></a>
+                    <a href="#">Troque seus pontos<i class="fas fa-arrow-right"></i></a>
             </div>
         </main>
 
