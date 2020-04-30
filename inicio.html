@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>WalkPass</title>
+</head>
+
+<body onload="Login()">
+    
+    <div id="container-top">
+
+        <header>
+            <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+
+            <nav>
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="search" placeholder=" Pesquisar">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+
+                <div class="menu">
+                    <img src="../images/rosto.jpg">
+                    <p>Minha Conta</p>
+                    <span class="tooltip">
+                        <a href="">Editar</a>
+                        <a href="">Configurações</a>
+                        <a href="">Ultimas compras</a>
+                        <a href="index.html">Sair</a>
+                    </span>
+                </div>
+            </nav>
+        </header>
+
+        <div id="top-nav">
+            <a href="#item1">Estações</a>
+            <a href="#item2">Vagões</a>
+            <a href="#item3">Quem Somos</a>
+            <a href="#item4">Rewards</a>
+        </div>
+
+        <section id="buy">
+            <div class="content">
+
+                <div class="input">
+                    <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de partida"
+                        list="estacao">
+                    <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de chegada"
+                        list="estacao">
+
+                    <datalist id="estacao">
+                        <!--Ramal Saracuruna-->
+                        <option value="Central do Brasil"></option>
+                        <option value="São Cristóvão"></option>
+                        <option value="Maracanã"></option>
+                        <option value="Triagem"></option>
+                        <option value="Manguinhos"></option>
+                        <option value="Bonsucesso"></option>
+                        <option value="Ramos"></option>
+                        <option value="Olaria"></option>
+                        <option value="Penha"></option>
+                        <option value="Penha Circular"></option>
+                        <option value="Brás de Pina"></option>
+                        <option value="Cordovil"></option>
+                        <option value="Parada de Lucas"></option>
+                        <option value="Vigário Geral"></option>
+                        <option value="Duque de Caxias"></option>
+                        <option value="Corte Oito"></option>
+                        <option value="Gramacho"></option>
+                        <option value="Campos Elíseos "></option>
+                        <option value="Jardim Primavera "></option>
+                        <option value="Saracuruna"></option>
+                    </datalist>
+                </div>
+
+                <div class="input">
+                    <i class="fas fa-long-arrow-alt-right" i>
+                        <h6>ida</h6>
+                    </i><input id="date" type="date">
+                    <i class="fas fa-long-arrow-alt-left" i>
+                        <h6>volta</h6>
+                    </i><input id="date" type="date">
+                </div>
+             
+
+                <div class="input" id="quantidade">
+                    <h3>Quantidade</h3>               
+                     <input type="number" id="quantity" name="quantity" min="1" max="5">
+                     <div class="btn"> 
+                        <button onclick="SomarValores()" class="btn-green">calcular</button>
+                     
+                </form>
+            </div>
+
+            <button id="item1" onclick="()">Comprar</button>
+    </div>
+
+
+    </section>
+
+    <!-- Carrossel -->
+
+    <div id="fundo-vantagem"></div>
+
+    <main id="vantagens">
+        <div class="item-1">
+            <img src="https://image.flaticon.com/icons/svg/1598/1598196.svg">
+            <h3>O caminho mais ecológico a seguir</h3>
+            <p>Reduza sua pegada de carbono pela cidade</p>
+        </div>
+        <div class="item-2">
+            <img src="https://image.flaticon.com/icons/svg/533/533490.svg">
+            <h3>Viagem ao Centro</h3>
+            <p>Chegue ao centro do Rio de Janeiro</p>
+        </div>
+        <div class="item-3">
+            <img src="https://image.flaticon.com/icons/svg/2088/2088617.svg">
+            <h3>Aproveite ao máximo o seu tempo de viagem</h3>
+            <p>Chegue ao seu destino sem perder tempo em trânsito</p>
+        </div>
+    </main>
+    </div>
+
+    <!-- Conteudo principal -->
+
+    <section class="main-principal">
+
+        <main>
+            <img src="../images/estacoes.jpg">
+
+            <div class="description">
+
+                <h1>Estações</h1>
+
+                <p>O Ramal Saracuruna possui 20 estações partindo da estação de Sacaruruna e terminando na Central do
+                    Brasil. <br><br>
+                    <strong>Horário de funcionamento:</strong> <br>
+                    <strong>Dias úteis:</strong> das 4h16 às 21h59 <br>
+                    <strong>Sábados:</strong> das 4h19 às 21h <br>
+                    <strong>Domingos e feriados:</strong> das 4h53 às 19h33</p><br>
+
+                <a href="pag2.html">Saiba mais<i class="fas fa-arrow-right" id="item2"></i></a>
+            </div>
+        </main>
+
+        <main>
+            <img src="../images/tiket.jpg">
+
+            <div class="description">
+                <h1>Passe</h1>
+                <p>O Passe é uma forma mais pratica para o seu dia a dia. Compre um passe agora e faça quantas viagens
+                    quiser! <br><br>
+                    <strong>Opções:</strong><br>
+                    Pass semanal<br>
+                    Pass mensal<br><br>
+
+                    <a href="#">Saiba mais<i class="fas fa-arrow-right"></i></a>
+            </div>
+        </main>
+
+        <main>
+            <img src="../images/rewards.jpg">
+
+            <div class="description">
+
+                <h1>Rewards</h1>
+
+                <p>Aqui você pode acompanhar sua pontuação. <br><br>
+                    <strong>Sua pontuação atual é: </strong> <br>
+                    <strong>Dias úteis:</strong> das 4h16 às 21h59 <br>
+
+
+                    <a href="pag2.html">Troque seus pontos<i class="fas fa-arrow-right" id="item4"></i></a>
+            </div>
+        </main>
+
+    </section>
+
+    <section id="back">
+
+        <div class="back-compra">
+            <h2>Todos a bordo!</h2>
+            <p>Você vai adorar o conforte de comprar bilhetes online.</p>
+            <button onclick="window.location.href = '#top'" id="item3">RESERVAR UM BILHETE</button>
+        </div>
+
+    </section>
+
+    <section class="main-principal">
+
+        <main>
+            <img src="../images/catraca.jpg" alt="">
+
+            <div class="description">
+                <h1>WalkPass</h1>
+                <p>O WalkPass é um sistema para controle de fluxo nas ferrovias do Rio de Janeiro. Atualmente é
+                    desenvolvido pela turma de PCA: Sistemas de Gestão de Conteúdos, matéria encontrada na grade do
+                    curso de Sistema de informação da universidade do Grande Rio. </p>
+                <p>WalkPass tem como desenvolvedores os alunos: Marlon e Danilo, orientados pela professora Natália
+                    Joana.</p>
+            </div>
+        </main>
+
+    </section>
+
+    <!-- Footer da pagina -->
+
+    <footer>
+        <img class="line" src="../images/footer.png">
+        <img class="logo" src="../images/logo (2).png" alt="Logo">
+
+        <div class="sobre">
+            <h3>Sobre o sistema:</h3>
+            <p>Sistema desenvolvido com a finalidade de agilizar a venda dos bilhetes,
+                reduzir a super lotação nos vagãos e diminuir o tempo gasto dentro do mesmo.
+            </p>
+        </div>
+
+        <div class="social">
+            <h3>Social:</h3>
+            <p>Marlon Victor <a href="https://github.com/MarlonVictor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marlon-victor-2548b51a2/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a></p>
+            <hr>
+            <p>Marlon Victor <a href="https://github.com/MarlonVictor" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/marlon-victor-2548b51a2/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a></p>
+        </div>
+        <address>
+            <hr>&copy; 2020 - Walkpass &nbsp;&nbsp;&nbsp; Todos Direitos Reservados.
+        </address>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
