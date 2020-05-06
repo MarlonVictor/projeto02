@@ -1,0 +1,179 @@
+.banner img {
+    width: 100%; 
+    height: 150px; 
+}
+.banner p {
+    width: 60%;
+    color: white;
+    position: relative;
+    bottom: 100px;
+    left: 40px;
+    font-size: 14px;
+}
+
+.banner h2 {
+    width: 60%;
+    color: white;
+    position: relative;
+    bottom: 100px;
+    left: 40px;
+}
+
+#pag2 {
+    grid-template-columns: 65% 35%;
+    display: grid;
+    font-size: 16px; 
+    margin-bottom: 50px;
+}
+
+#pag2 .estacoes {
+    margin: auto;        
+    width: 90%;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;                    
+}
+
+.estacoes .title {
+    padding: 3% 0;
+    background-color: #0387A5;
+    color: white;
+}
+
+.estacoes .title h2, button {
+    margin-left: 5%;
+    padding-bottom: 1%;
+}
+
+.estacoes .title button {
+    font-size: 14px;
+    text-decoration: underline;
+    background: transparent;
+    color: white;
+}
+
+.estacoes .line p{
+    visibility: hidden;
+}
+
+.estacoes .line ul {
+    padding: 20px 50px;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.estacoes .line li {
+    height: 50px;
+    transition: 200ms;
+}
+
+.estacoes .line li:hover {
+    height: 80px;
+}
+
+.estacoes .line li:hover p{
+    visibility: visible;
+    transition: 200ms
+}
+
+.estacoes .line h3 i {
+    position: relative;
+    bottom: 20px;    
+    padding-left: 95%;
+    transition: 200ms;
+}
+
+.estacoes .line li:hover h3 i {
+    transform: rotateX(180deg)
+}
+
+/* Tabela */
+.tabela {
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    padding: 20px;
+}
+
+.tabela p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    text-align: left;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.right {
+    text-align: right;
+}
+
+tr.gray {
+    background-color: rgb(238, 237, 237);
+}
+
+th {
+    color: white;
+    background-color: #00958E;
+    padding: 3%;
+}
+
+td {
+    padding: 3%;
+}
+
+aside img {
+    width: 78%;
+    margin: 40px 0 0 12%;
+    border-radius: 10px;
+}
+
+footer .line button{
+    position: absolute;
+    left: 0;
+    margin: 2% 0 0 44%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0387A5;
+    color: white;
+}
+
+@media (max-width: 980px) {
+    #pag2 {
+        grid-template-columns: 70% 30%;
+    }
+}
+
+@media (max-width: 850px) {
+    #pag2 {
+        grid-template-columns: 100%;
+        grid-template-rows: 32% 68%;
+        padding: 0 20px;
+    }
+    #pag2 aside {
+        grid-row: 1;
+        width: 90%;
+        margin: auto;
+    }
+    #pag2 aside img {
+        display: none;
+    }
+}
+
+@media (max-width: 655px) {
+    #pag2 {
+        padding: 0;
+        font-size: 13px;
+    }
+    .line ul {
+        padding: 15px;
+    }
+    .tab {
+        padding: 30px 10px;
+    }
+}

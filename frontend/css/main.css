@@ -19,6 +19,10 @@ button, a {
     outline: none;
 }
 
+button:hover {
+    filter: brightness(95%);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -64,7 +68,7 @@ header {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid #00958E;
-    z-index: 10;
+    z-index: 1;
 }
 
 header a img {
@@ -115,7 +119,7 @@ header a img {
 .menu {  /* Minha conta */
     display: flex;
     align-items: center;
-    padding: 14px; 
+    padding: 14px 34.5px; 
     transition: 200ms;
 }
 
@@ -135,7 +139,7 @@ header a img {
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-top: 115px;            
+    margin-top: 74px;            
     width: 169px;
     right: 10%;
     background-color: #00958E;
@@ -169,12 +173,12 @@ header a img {
     margin-left: 85px;
     color: white;
     font-size: 16px;
-    transition: 200ms; 
+    transition: 500ms;
 }
 
-#top-nav a:hover {
-    background-color: white;
-    color: #00958E;
+#top-nav a:hover{
+   filter: brightness(85%);
+   padding: 5px 25px;
 }
 
 /* Parte da compra */
@@ -498,151 +502,17 @@ hr {
     margin-bottom: 7px;
 }
 
-/* Pagina estações */
+/* Calendário */
 
-.banner img {
-    width: 100%; 
-    height: 150px; 
-}
-.banner p {
-    width: 60%;
-    color: white;
-    position: relative;
-    bottom: 100px;
-    left: 40px;
-    font-size: 14px;
+.ui-datepicker .ui-datepicker-header {
+    background: #00958E;
+    color: #fff;
+    height: 38px;
 }
 
-.banner h2 {
-    width: 60%;
-    color: white;
-    position: relative;
-    bottom: 100px;
-    left: 40px;
-}
-
-#pag2 {
-    grid-template-columns: 65% 35%;
-    display: grid;
-    font-size: 16px; 
-    margin-bottom: 50px;
-}
-
-#pag2 .estacoes {
-    margin: auto;        
-    width: 90%;
-    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
-    border-radius: 10px;                    
-}
-
-.estacoes .title {
-    padding: 3% 0;
-    background-color: #0387A5;
-    color: white;
-}
-
-.estacoes .title h2, button {
-    margin-left: 5%;
-    padding-bottom: 1%;
-}
-
-.estacoes .title button {
-    font-size: 14px;
-    text-decoration: underline;
-    background: transparent;
-    color: white;
-}
-
-.estacoes .line p{
-    visibility: hidden;
-}
-
-.estacoes .line ul {
-    padding: 20px 50px;
-}
-
-.reverse {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.estacoes .line li {
-    height: 50px;
-    transition: 200ms;
-}
-
-.estacoes .line li:hover {
-    height: 80px;
-}
-
-.estacoes .line li:hover p{
-    visibility: visible;
-    transition: 200ms
-}
-
-.estacoes .line h3 i {
-    position: relative;
-    bottom: 20px;    
-    padding-left: 95%;
-    transition: 200ms;
-}
-
-.estacoes .line li:hover h3 i {
-    transform: rotateX(180deg)
-}
-
-/* Tabela */
-.tabela {
-    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
-    padding: 20px;
-}
-
-.tabela p{
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-table {
-    width: 100%;
-    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
-    text-align: left;
-    border-spacing: 2px;
-    border-collapse: collapse;
-    font-size: 16px;
-}
-
-.right {
-    text-align: right;
-}
-
-tr.gray {
-    background-color: rgb(238, 237, 237);
-}
-
-th {
-    color: white;
-    background-color: #00958E;
-    padding: 3%;
-}
-
-td {
-    padding: 3%;
-}
-
-aside img {
-    width: 78%;
-    margin: 40px 0 0 12%;
-    border-radius: 10px;
-}
-
-footer .line button{
-    position: absolute;
-    left: 0;
-    margin: 2% 0 0 44%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #0387A5;
-    color: white;
+.ui-datepicker .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-prev:hover {
+    background: #00958E;
+    filter: brightness(110%);
 }
 
 /* Responsividade */
@@ -662,9 +532,6 @@ footer .line button{
     table {
         font-size: 14px;
     }
-    #pag2 {
-        grid-template-columns: 70% 30%;
-    }
 }
 
 @media (max-width: 850px) {
@@ -683,19 +550,6 @@ footer .line button{
     .item-1, .item-2, .item-3 {
         font-size: 12px;
         padding-left: 50px;
-    }
-    #pag2 {
-        grid-template-columns: 100%;
-        grid-template-rows: 32% 68%;
-        padding: 0 20px;
-    }
-    aside {
-        grid-row: 1;
-        width: 90%;
-        margin: auto;
-    }
-    aside img {
-        display: none;
     }
     footer .line button {
         margin-left: 40%;
@@ -719,6 +573,9 @@ footer .line button{
     #fundo-vantagem, .item-1, .item-2, .item-3 {
         display: none;
     }  
+    #passageiros .ticket-checkbox {
+        width: 100%;
+    }
 }
 
 @media (max-width: 655px) {
@@ -739,13 +596,6 @@ footer .line button{
         font-size: 14px;
         line-height: 30px;
         padding: 20px 0;
-    }
-    #pag2 {
-        padding: 0;
-        font-size: 13px;
-    }
-    .line ul {
-        padding: 15px;
     }
     footer {
         grid-template-rows: 55px 140px 30px;
@@ -776,5 +626,3 @@ footer .line button{
         display: none;
     }
 }
-
-    

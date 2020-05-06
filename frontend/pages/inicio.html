@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- DatePicker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
     <title>WalkPass</title>
 </head>
 
@@ -29,11 +33,9 @@
 
                 <div class="menu">
                     <img src="../images/rosto.jpg">
-                    <p>Minha Conta</p>
+                    <p id="nome">Marlon</p> 
                     <span class="tooltip">
-                        <a href="">Editar</a>
-                        <a href="">Configurações</a>
-                        <a href="">Ultimas compras</a>
+                        <a href="account.html">Minha conta</a>
                         <a href="index.html">Sair</a>
                     </span>
                 </div>
@@ -81,8 +83,8 @@
                 </div>
 
                 <div class="input">
-                    <i class="fas fa-long-arrow-alt-right"></i><input type="date" placeholder="ida">
-                    <i class="fas fa-long-arrow-alt-left"></i><input type="datetime" placeholder="volta  (opcional)">
+                    <i class="fas fa-long-arrow-alt-right"></i><input type="text" placeholder="ida" class="calendario">
+                    <i class="fas fa-long-arrow-alt-left"></i><input type="text" placeholder="volta  (opcional)" class="calendario">
                 </div>
 
                 <div class="ticket-checkbox">
@@ -94,28 +96,28 @@
                         </label>
                         <div class="ticket-opc">
                             <div class="numero">
-                                <input type="number" value="1">
+                                <input type="number" value="1" min="0">
                             </div>
                             <p><h3>Adulto</h3></p>
                             <p>18-64 anos</p>
                         </div>
                         <div class="ticket-opc">
                             <div class="numero">
-                                <input type="number" value="0">
+                                <input type="number" value="0" min="0">
                             </div>
                             <p><h3>Jovem</h3></p>
                             <p>12-17 anos</p>
                         </div>
                         <div class="ticket-opc">
                             <div class="numero">
-                                <input type="number" value="0">
+                                <input type="number" value="0" min="0">
                             </div>
                             <p><h3>Criança</h3></p>
                             <p>0-11 anos</p>
                         </div>
                         <div class="ticket-opc">
                             <div class="numero">
-                                <input type="number" value="0">
+                                <input type="number" value="0" min="0">
                             </div>
                             <p><h3>Idoso</h3></p>
                             <p>65+ anos (grátis)</p>
@@ -173,7 +175,7 @@
                     <strong>Sábados:</strong> das 4h19 às 21h <br>
                     <strong>Domingos e feriados:</strong> das 4h53 às 19h33</p><br>
 
-                <a href="pag2.html">Saiba mais<i class="fas fa-arrow-right" id="item2"></i></a>
+                <a href="station.html">Saiba mais<i class="fas fa-arrow-right" id="item2"></i></a>
             </div>
         </main>
 
@@ -247,4 +249,18 @@
     </footer>
 
 </body>
+<script>
+    $(function date() {
+        $(".calendario").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            today: new Date,
+            minDate: new Date,
+            dateFormat: 'dd/mm/yy',
+            dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+            dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+            monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        });
+    }); 
+</script>
 </html>

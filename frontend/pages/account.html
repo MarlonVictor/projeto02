@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/account.css" type="text/css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <title>Minha conta - Walkpass</title>
+
+</head>
+
+<body style="background-color:#f3f3f3">
+    <header>
+        <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+        <nav>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="search" placeholder=" Pesquisar">
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+
+            <div class="menu">
+                <img src="../images/rosto.jpg">
+                <p>Marlon</p>
+                <span class="tooltip">
+                    <a href="account.html">Minha conta</a>
+                    <a href="index.html">Sair</a>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <div id="top-nav">
+        <a href="inicio.html">Home</a>
+    </div>
+
+    <div id="account">
+        <aside>
+            <ul>
+                <li data-tab-target="#conta" class="tab active">Conta</li>
+                <li data-tab-target="#dados" class="tab">Dados Pessoais</li>
+                <li data-tab-target="#out" class="tab">Sair</li>
+            </ul>
+        </aside>
+        <div class="tab-contant">
+
+            <div id="conta" data-tab-content class="active">
+                <h2>Bem-vindo à sua conta</h2>
+                <p>Estamos fazendo melhorias e introduzindo novos recursos na experiência da Minha conta.</p>
+                <p> Agora é muito mais fácil ...</p>
+                <div id="account_cards">
+                    <div class="account_card">
+                        <img src="https://image.flaticon.com/icons/svg/1584/1584942.svg" alt="">
+                        <p>Reserve seus bilhetes em 2 minutos!</p>
+                    </div>
+                    <div class="account_card">
+                        <img src="https://image.flaticon.com/icons/svg/639/639365.svg" alt="">
+                        <p>Pague o mesmo valor do guichê</p>
+                    </div>
+                    <div class="account_card">
+                        <img src="https://image.flaticon.com/icons/svg/845/845640.svg">
+                        <p>Reserve sua viagem e chegue ao seu destino em esforço</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dados" data-tab-content>
+                <h2>Dados Pessoais</h2>
+                <form>
+                    <label for="name">Primeiro nome</label><br>
+                    <input type="text" value="Marlon"><br>
+                
+                    <label for="name">Sobrenome</label><br>
+                    <input type="text" value="Victor"><br>
+                
+                    <label for="name">Email</label><br>
+                    <input type="email" value="cmarlonvictor11@gmail.com" disabled><br>
+                    <button>Salvar mudanças</button>
+                </form>
+                <img src="https://image.flaticon.com/icons/svg/1047/1047690.svg" alt="Conta">
+                
+            </div>
+
+            <div id="out" data-tab-content>
+                <h2>Tem certeza que deseja sair da conta?</h2>
+                <p><button onclick="window.location.href = 'index.html'">Sair</button>
+                    <a href="inicio.html">voltar para página principal</a></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
