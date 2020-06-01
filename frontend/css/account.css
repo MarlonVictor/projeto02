@@ -175,4 +175,44 @@ label {
         width: 250px;
         font-size: 15px;
     }
+} 
+
+@media (max-width: 480px) {
+    #account {
+        display: block;
+    }
+    #account aside {
+        width: 95%;
+        height: auto;
+        margin: auto;
+    }
+    #account aside ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #account aside li {
+        width: 550px;
+    }
+    .tab.active {
+        padding: 40px 5px;
+        border-right:none;
+        border-bottom: 5px solid #00958E;
+    }
+    #conta, #dados, #out {
+        margin: 50px auto 0;
+        width: 95%;
+    }
+    #dados input {
+        width: 100%;
+    }
+    #out button {
+        margin-right: 5px;
+    }
+    #out a {
+        font-size: 12px;
+        position: absolute;
+        bottom: 50px;
+        left: 85px;
+    }
 }

@@ -52,86 +52,86 @@
             <div class="content">
 
                 <div class="input">
-                    <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de partida"
-                        list="estacao">
-                    <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de chegada"
-                        list="estacao">
+                    <form onsubmit="return openModal()">
+                        <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de partida"
+                        list="estacao" id="p-partida" required>
+                        <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de chegada"
+                        list="estacao" id="p-chegada" required>
 
-                    <datalist id="estacao">
-                        <!--Ramal Saracuruna-->
-                        <option value="Central do Brasil"></option>
-                        <option value="São Cristóvão"></option>
-                        <option value="Maracanã"></option>
-                        <option value="Triagem"></option>
-                        <option value="Manguinhos"></option>
-                        <option value="Bonsucesso"></option>
-                        <option value="Ramos"></option>
-                        <option value="Olaria"></option>
-                        <option value="Penha"></option>
-                        <option value="Penha Circular"></option>
-                        <option value="Brás de Pina"></option>
-                        <option value="Cordovil"></option>
-                        <option value="Parada de Lucas"></option>
-                        <option value="Vigário Geral"></option>
-                        <option value="Duque de Caxias"></option>
-                        <option value="Corte Oito"></option>
-                        <option value="Gramacho"></option>
-                        <option value="Campos Elíseos "></option>
-                        <option value="Jardim Primavera "></option>
-                        <option value="Saracuruna"></option>
-                    </datalist>
-                </div>
-
-                <div class="input">
-                    <i class="fas fa-long-arrow-alt-right"></i><input type="text" placeholder="ida" class="calendario">
-                    <i class="fas fa-long-arrow-alt-left"></i><input type="text" placeholder="volta  (opcional)" class="calendario">
-                </div>
-
-                <div class="ticket-checkbox">
-                    <input type="checkbox" class="trigger-ticket" id="faq-titulo-1">
-
-                    <div class="trigger-wrapper">
-                        <label for="faq-titulo-1">
-                            <h2 class="ticket-title">1 bilhete - adulto</h2>
-                        </label>
-                        <div class="ticket-opc">
-                            <div class="numero">
-                                <input type="number" value="1" min="0">
-                            </div>
-                            <p><h3>Adulto</h3></p>
-                            <p>18-64 anos</p>
-                        </div>
-                        <div class="ticket-opc">
-                            <div class="numero">
-                                <input type="number" value="0" min="0">
-                            </div>
-                            <p><h3>Jovem</h3></p>
-                            <p>12-17 anos</p>
-                        </div>
-                        <div class="ticket-opc">
-                            <div class="numero">
-                                <input type="number" value="0" min="0">
-                            </div>
-                            <p><h3>Criança</h3></p>
-                            <p>0-11 anos</p>
-                        </div>
-                        <div class="ticket-opc">
-                            <div class="numero">
-                                <input type="number" value="0" min="0">
-                            </div>
-                            <p><h3>Idoso</h3></p>
-                            <p>65+ anos (grátis)</p>
-                        </div>
-                        <div class="ticket-opc">
-                            <p>As crianças podem viajar de graça no colo de um adulto e só precisam de um passaporte. Você pode levar apenas um bebê por adulto.</p>
-                        </div>
-
-                        <button id="ticket-confirm">confirmar</button>
+                        <datalist id="estacao">
+                            <!--Ramal Saracuruna-->
+                            <option value="Central do Brasil"></option>
+                            <option value="São Cristóvão"></option>
+                            <option value="Maracanã"></option>
+                            <option value="Triagem"></option>
+                            <option value="Manguinhos"></option>
+                            <option value="Bonsucesso"></option>
+                            <option value="Ramos"></option>
+                            <option value="Olaria"></option>
+                            <option value="Penha"></option>
+                            <option value="Penha Circular"></option>
+                            <option value="Brás de Pina"></option>
+                            <option value="Cordovil"></option>
+                            <option value="Parada de Lucas"></option>
+                            <option value="Vigário Geral"></option>
+                            <option value="Duque de Caxias"></option>
+                            <option value="Corte Oito"></option>
+                            <option value="Gramacho"></option>
+                            <option value="Campos Elíseos "></option>
+                            <option value="Jardim Primavera "></option>
+                            <option value="Saracuruna"></option>
+                        </datalist>
                     </div>
-                </div>      
 
-                <button id="item1">Procurar</button>
-            </div>
+                    <div class="input">
+                        <i class="fas fa-long-arrow-alt-right"></i><input type="text" placeholder="ida" class="calendario" id="day" required autocomplete="off">
+                        <i class="fas fa-long-arrow-alt-left"></i><input type="text" placeholder="volta  (opcional)" class="calendario" autocomplete="off">
+                    </div>
+
+                    <div class="ticket-checkbox">
+                        <input type="checkbox" class="trigger-ticket" id="faq-titulo-1">
+
+                        <div class="trigger-wrapper">
+                            <label for="faq-titulo-1">
+                                <h2 class="ticket-title">1 bilhete - adulto</h2>
+                            </label>
+                            <div class="ticket-opc">
+                                <div class="numero">
+                                    <input type="number" value="1" min="0">
+                                </div>
+                                <p><h3>Adulto</h3></p>
+                                <p>18-64 anos</p>
+                            </div>
+                            <div class="ticket-opc">
+                                <div class="numero">
+                                    <input type="number" value="0" min="0">
+                                </div>
+                                <p><h3>Jovem</h3></p>
+                                <p>12-17 anos</p>
+                            </div>
+                            <div class="ticket-opc">
+                                <div class="numero">
+                                    <input type="number" value="0" min="0">
+                                </div>
+                                <p><h3>Criança</h3></p>
+                                <p>0-11 anos</p>
+                            </div>
+                            <div class="ticket-opc">
+                                <div class="numero">
+                                    <input type="number" value="0" min="0">
+                                </div>
+                                <p><h3>Idoso</h3></p>
+                                <p>65+ anos (grátis)</p>
+                            </div>
+                            <div class="ticket-opc">
+                                <p>As crianças podem viajar de graça no colo de um adulto e só precisam de um passaporte. Você pode levar apenas um bebê por adulto.</p>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <input type="submit" id="item1" value="Procurar"></input>
+                </div>
+            </form>
         </section>
 
         <!-- Carrossel -->
@@ -156,6 +156,96 @@
                 </div>
             </main>
         </div>
+
+    <!-- Modal de compra -->
+
+    <section id="modal">
+        <div class="content">
+            <div class="close" onclick="closeModal()">+</div>
+            <main>
+                <div class="confirm">
+                    <h1>Confirme sua passagem:</h1>
+
+                    <p><strong>Local de partida: </strong><span id="partida"></span></p>
+                    <p><strong>Local de chegada: </strong><span id="chegada"></span></p>
+                    <p><strong>Dia: </strong><span id="printDay"></span></p>
+                    <p><strong>Horário: </strong><select name="hours">
+                        <option value="19:30">19:30</option>
+                        <option value="19:40">19:40</option>
+                        <option value="19:50">19:50</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:10">20:10</option>
+                        <option value="20:20">20:20</option>
+                        <option value="20:30">20:30</option>
+                        <option value="20:40">20:40</option>
+                        <option value="20:50">20:50</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:10">21:10</option>
+                        <option value="21:20">21:20</option>
+                        <option value="21:30">21:30</option>
+                    </select></p>
+                    <button onclick="closeModal()">Comprar passagem</button>
+                </div>
+                <div class="lugar">
+                    <input type="radio" name="vagão" value="Vagão 1">
+                    <input type="radio" name="vagão" value="Vagão 2">
+                    <input type="radio" name="vagão" value="Vagão 3">
+                    <input type="radio" name="vagão" value="Vagão 4">
+
+                    <div class="assento">
+                        <input type="radio" name="assento" value="A1" class="ocupado">
+                        <input type="radio" name="assento" value="A2" class="ocupado">
+                        <input type="radio" name="assento" value="A3" class="ocupado">
+                        <input type="radio" name="assento" value="A4" class="preferencial">
+                        <input type="radio" name="assento" value="A5" class="preferencial">
+                        <input type="radio" name="assento" value="A6" class="preferencial">
+                        <input type="radio" name="assento" value="A7" class="preferencial">
+                        <input type="radio" name="assento" value="A8">
+                        <input type="radio" name="assento" value="A9">
+                        <input type="radio" name="assento" value="A10" class="ocupado">
+                        <input type="radio" name="assento" value="A11" class="ocupado">
+                        <input type="radio" name="assento" value="A12">
+                        <input type="radio" name="assento" value="A13">
+                        <input type="radio" name="assento" value="A14" class="ocupado">
+                        <input type="radio" name="assento" value="A15">
+                        <input type="radio" name="assento" value="A16">
+                        <input type="radio" name="assento" value="A17">
+                        <input type="radio" name="assento" value="A18">
+                        <input type="radio" name="assento" value="A19" class="ocupado">
+                        <input type="radio" name="assento" value="A20" class="ocupado">
+                        <input type="radio" name="assento" value="A21" class="ocupado">
+                        <input type="radio" name="assento" value="A22">
+                        <input type="radio" name="assento" value="A23">
+                        <input type="radio" name="assento" value="A24">
+                        <input type="radio" name="assento" value="A25">
+                        <input type="radio" name="assento" value="A26" class="ocupado">
+                        <input type="radio" name="assento" value="A27" class="preferencial">
+                        <input type="radio" name="assento" value="A28" class="preferencial">
+                        <input type="radio" name="assento" value="A29" class="preferencial">
+                        <input type="radio" name="assento" value="A30" class="preferencial">
+                        <input type="radio" name="assento" value="A31">
+                        <input type="radio" name="assento" value="A32">
+                        <input type="radio" name="assento" value="A33">
+                        <input type="radio" name="assento" value="A34">
+                        <input type="radio" name="assento" value="A35">
+                        <input type="radio" name="assento" value="A36">
+                        <input type="radio" name="assento" value="A37">
+                        <input type="radio" name="assento" value="A38">
+                        <input type="radio" name="assento" value="A39" class="ocupado">
+                        <input type="radio" name="assento" value="A40" class="ocupado">
+                        <input type="radio" name="assento" value="A41" class="ocupado">
+                        <input type="radio" name="assento" value="A42" class="ocupado">
+                    </div>
+                    <div class="comprar">
+                        <p class="selecionado">Selecionado</p>
+                        <p class="livre">Assento Livre</p>
+                        <p>Assento Ocupado</p>
+                        <p class="preferencial">Assento Preferencial</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
 
     <!-- Conteudo principal -->
 
@@ -184,8 +274,8 @@
 
             <div class="description">
                 <h1>Rewards</h1>
-                <p>Aqui você pode acompanhar sua pontuação! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet, inventore debitis doloribus accusamus reprehenderit?<br><br>
-                    <strong>Sua pontuação atual é:&nbsp;&nbsp; 70</strong></p><br><br>
+                <p>Aqui você pode acompanhar sua pontuação!<br><br>
+                    <strong>Sua pontuação atual é: <span id="reward">0</span></strong></p><br><br>
 
                     <a href="#">Troque seus pontos<i class="fas fa-arrow-right"></i></a>
             </div>
@@ -249,6 +339,7 @@
     </footer>
 
 </body>
+
 <script>
     $(function date() {
         $(".calendario").datepicker({
@@ -263,4 +354,5 @@
         });
     }); 
 </script>
+<script src="../script.js"></script>
 </html>

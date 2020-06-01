@@ -277,7 +277,7 @@ header a img {
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
 }
 
-button#item1 {
+input#item1 {
     margin: 2% auto 4%;
     padding: 2%;
     width: 50%;
@@ -286,6 +286,7 @@ button#item1 {
     background-color: #00958E;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    cursor: pointer;
 }
 
 /*carrossel*/
@@ -345,6 +346,160 @@ button#item1 {
     0%, 66.66% { right: 3%; opacity: 0; }
     74.96%, 91.62% { right: 3%; opacity: 1; }
     100% { right: 3%; opacity: 0; }
+}
+
+/* Modal de Compra */
+
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+}
+
+#modal .content {
+    width: 90%;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+    top: 40px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#modal .content .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-weight: 900;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: red;
+}
+
+#modal .content main {
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 200px;
+}
+#modal .content main h1 {
+    position: relative;
+    bottom: 100px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: rgb(0, 134, 128);
+}
+
+main .confirm p {
+    line-height: 40px;
+    font-size: 18px;
+    position: relative;
+    bottom: 50px;
+}
+main .confirm select {
+    padding: 0 5px;
+    font-size: 15px;
+}
+main .confirm button { 
+    padding: 2%;
+    width: 260px;
+    font-size: 20px;
+    color: white;
+    background-color: #00958E;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+}
+
+main .lugar {
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+}
+
+.lugar input[type=radio] {
+    width: 100px;
+    height: 40px;
+    margin: 10px 10px 0;
+}
+.lugar input[type=radio]::after {
+    width: 100px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    content: attr(value);
+    display: block;
+    text-align: center;
+    line-height: 36px;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+.lugar input[type=radio]:hover::after, .lugar input[type=radio]:checked::after {
+    background-color: rgb(0, 134, 128);
+    color: #fff;
+    border: 2px solid #000;
+}
+.lugar input[type=radio].ocupado::after {
+    background-color: rgb(158, 158, 158);
+}
+.lugar input[type=radio].ocupado:hover::after {
+    color: #000;
+}
+.lugar input[type=radio].preferencial::after {
+    background-color: #32425B;
+    color: #fff;
+}
+
+.lugar .assento {
+    position: relative;
+    top: 30px;
+}
+.assento input[type=radio], .assento input[type=radio]::after {
+    width: 35px;
+    height: 30px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+.lugar .comprar {
+    margin-top: 10%;
+}
+
+.lugar p {
+    text-align: left;
+    display: flex;
+    font-size: 18px;
+    padding: 5px 0;
+}
+.lugar p::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    background-color: rgb(158, 158, 158);
+    border-radius: 50%;
+}
+.lugar p.livre::before {
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+.lugar p.preferencial::before {
+    background-color: #32425B;
+}
+.lugar p.selecionado::before {
+    background-color: rgb(0, 134, 128);
 }
 
 /* Conteudo principal */
@@ -551,6 +706,10 @@ hr {
         font-size: 12px;
         padding-left: 50px;
     }
+    #modal .content {
+        top: 70px;
+        height: 550px;
+    }
     footer .line button {
         margin-left: 40%;
     }
@@ -575,6 +734,33 @@ hr {
     }  
     #passageiros .ticket-checkbox {
         width: 100%;
+    }
+    #modal {
+        height: 900px;
+    }
+    #modal .content {
+        top: 40px;
+        height: 800px;
+        padding: 20px;
+    }
+    #modal .content main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    main .lugar {
+        bottom: 30px;
+    }
+    main .confirm button { 
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #modal .content .confirm p {
+        font-size: 15px;
+    }
+    .content .lugar .comprar {
+        margin-top: 40px;
     }
 }
 
@@ -606,6 +792,8 @@ hr {
     }
 }
 
+
+
 @media (max-width: 400px) {
     header a img {
         width: 120px;
@@ -615,6 +803,12 @@ hr {
     }
     .description {
         padding: 30px;
+    }
+    #modal {
+        height: 1000px;
+    }
+    #modal .content {
+        height: 900px;
     }
     .banner {
         height: 170px;

@@ -20,7 +20,7 @@ function Login() {
 
 }
 
-// btn da senha
+// Mostrar senha
 
 function showPassword() {
     const show = document.getElementById("password");
