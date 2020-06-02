@@ -17,7 +17,6 @@ function Login() {
     password = password.toLowerCase();
     if (username == "danilo" && password == "marlon") { window.location = "inicio.html"; done = 1; }
     if (done == 0) { alert("[ERROR] Senha ou Usuário inválido."); }
-
 }
 
 // Mostrar senha
@@ -71,3 +70,37 @@ tabs.forEach(tab => {
     target.classList.add('active')
   })
 })
+
+// Btn de compra
+
+const partida = document.getElementById('p-partida');
+const chegada = document.getElementById('p-chegada');
+const day = document.getElementById('day');
+const printPartida = document.getElementById('partida');
+const printChegada = document.getElementById('chegada');
+const printDay = document.getElementById('printDay');
+const printReward = document.getElementById('reward');
+let pontos = 0;
+
+document.querySelector('#item1').addEventListener('click', function() {
+  printPartida.innerHTML = partida.value;
+  printChegada.innerHTML = chegada.value;
+  printDay.innerHTML = day.value;
+})
+
+// Modal de compra
+
+function openModal() {
+  document.querySelector('#modal').style.display = 'flex';
+  return false;
+}
+function closeModal() {
+  document.querySelector('#modal').style.display = 'none';
+
+  partida.value = '';
+  chegada.value = '';
+  day.value = '';
+
+  pontos = pontos + 10;
+  printReward.innerHTML = pontos;
+}
