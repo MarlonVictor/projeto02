@@ -11,9 +11,7 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- DatePicker -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    
     <title>WalkPass</title>
 </head>
 
@@ -33,7 +31,7 @@
 
                 <div class="menu">
                     <img src="../images/rosto.jpg">
-                    <p id="nome">Marlon</p> 
+                    <p id="nome">Marlon</p>
                     <span class="tooltip">
                         <a href="account.html">Minha conta</a>
                         <a href="index.html">Sair</a>
@@ -45,7 +43,7 @@
         <div id="top-nav">
             <a href="#item1">Estações</a>
             <a href="#item2">Rewards</a>
-            <a href="#item3">Quem Somos</a>
+            <a href="covid.html">Alert covid</a>
         </div>
 
         <section id="buy">
@@ -54,9 +52,9 @@
                 <div class="input">
                     <form onsubmit="return openModal()">
                         <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de partida"
-                        list="estacao" id="p-partida" required>
+                            list="estacao" id="p-partida" required>
                         <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Estação de chegada"
-                        list="estacao" id="p-chegada" required>
+                            list="estacao" id="p-chegada" required>
 
                         <datalist id="estacao">
                             <!--Ramal Saracuruna-->
@@ -81,56 +79,67 @@
                             <option value="Jardim Primavera "></option>
                             <option value="Saracuruna"></option>
                         </datalist>
-                    </div>
-
-                    <div class="input">
-                        <i class="fas fa-long-arrow-alt-right"></i><input type="text" placeholder="ida" class="calendario" id="day" required autocomplete="off">
-                        <i class="fas fa-long-arrow-alt-left"></i><input type="text" placeholder="volta  (opcional)" class="calendario" autocomplete="off">
-                    </div>
-
-                    <div class="ticket-checkbox">
-                        <input type="checkbox" class="trigger-ticket" id="faq-titulo-1">
-
-                        <div class="trigger-wrapper">
-                            <label for="faq-titulo-1">
-                                <h2 class="ticket-title">1 bilhete - adulto</h2>
-                            </label>
-                            <div class="ticket-opc">
-                                <div class="numero">
-                                    <input type="number" value="1" min="0">
-                                </div>
-                                <p><h3>Adulto</h3></p>
-                                <p>18-64 anos</p>
-                            </div>
-                            <div class="ticket-opc">
-                                <div class="numero">
-                                    <input type="number" value="0" min="0">
-                                </div>
-                                <p><h3>Jovem</h3></p>
-                                <p>12-17 anos</p>
-                            </div>
-                            <div class="ticket-opc">
-                                <div class="numero">
-                                    <input type="number" value="0" min="0">
-                                </div>
-                                <p><h3>Criança</h3></p>
-                                <p>0-11 anos</p>
-                            </div>
-                            <div class="ticket-opc">
-                                <div class="numero">
-                                    <input type="number" value="0" min="0">
-                                </div>
-                                <p><h3>Idoso</h3></p>
-                                <p>65+ anos (grátis)</p>
-                            </div>
-                            <div class="ticket-opc">
-                                <p>As crianças podem viajar de graça no colo de um adulto e só precisam de um passaporte. Você pode levar apenas um bebê por adulto.</p>
-                            </div>
-                        </div>
-                    </div>      
-
-                    <input type="submit" id="item1" value="Procurar"></input>
                 </div>
+
+                <div class="input">
+                    <i class="fas fa-long-arrow-alt-right"></i><input type="date" placeholder="ida" class="calendario"
+                        id="day" required autocomplete="off" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                    <i class="fas fa-long-arrow-alt-left"></i><input type="date" placeholder="volta  (opcional)"
+                        class="calendario" autocomplete="off" >
+                </div>
+
+                <div class="ticket-checkbox">
+                    <input type="checkbox" class="trigger-ticket" id="faq-titulo-1">
+
+                    <div class="trigger-wrapper">
+                        <label for="faq-titulo-1">
+                            <h2 class="ticket-title">1 bilhete - adulto</h2>
+                        </label>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="1" min="0">
+                            </div>
+                            <p>
+                                <h3>Adulto</h3>
+                            </p>
+                            <p>18-64 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0" min="0">
+                            </div>
+                            <p>
+                                <h3>Jovem</h3>
+                            </p>
+                            <p>12-17 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0" min="0">
+                            </div>
+                            <p>
+                                <h3>Criança</h3>
+                            </p>
+                            <p>0-11 anos</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <div class="numero">
+                                <input type="number" value="0" min="0">
+                            </div>
+                            <p>
+                                <h3>Idoso</h3>
+                            </p>
+                            <p>65+ anos (grátis)</p>
+                        </div>
+                        <div class="ticket-opc">
+                            <p>As crianças podem viajar de graça no colo de um adulto e só precisam de um passaporte.
+                                Você pode levar apenas um bebê por adulto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" id="itemm1" value="Procurar" onclick="printData()"></input>
+            </div>
             </form>
         </section>
 
@@ -138,24 +147,24 @@
 
         <div id="fundo-vantagem"></div>
 
-            <main id="vantagens">
-                <div class="item-1">
-                    <img src="https://image.flaticon.com/icons/svg/1598/1598196.svg">
-                    <h3>O caminho mais ecológico a seguir</h3>
-                    <p>Reduza seu rastro de carbono pela cidade</p>
-                </div>
-                <div class="item-2">
-                    <img src="https://image.flaticon.com/icons/svg/533/533490.svg">
-                    <h3>Viagem ao Centro</h3>
-                    <p>Chegue ao centro do Rio de Janeiro</p>
-                </div>
-                <div class="item-3">
-                    <img src="https://image.flaticon.com/icons/svg/2088/2088617.svg">
-                    <h3>Aproveite ao máximo o seu tempo de viagem</h3>
-                    <p>Chegue ao seu destino sem perder tempo no trânsito</p>
-                </div>
-            </main>
-        </div>
+        <main id="vantagens">
+            <div class="item-1">
+                <img src="https://image.flaticon.com/icons/svg/1598/1598196.svg">
+                <h3>O caminho mais ecológico a seguir</h3>
+                <p>Reduza seu rastro de carbono pela cidade</p>
+            </div>
+            <div class="item-2">
+                <img src="https://image.flaticon.com/icons/svg/533/533490.svg">
+                <h3>Viagem ao Centro</h3>
+                <p>Chegue ao centro do Rio de Janeiro</p>
+            </div>
+            <div class="item-3">
+                <img src="https://image.flaticon.com/icons/svg/2088/2088617.svg">
+                <h3>Aproveite ao máximo o seu tempo de viagem</h3>
+                <p>Chegue ao seu destino sem perder tempo no trânsito</p>
+            </div>
+        </main>
+    </div>
 
     <!-- Modal de compra -->
 
@@ -170,20 +179,20 @@
                     <p><strong>Local de chegada: </strong><span id="chegada"></span></p>
                     <p><strong>Dia: </strong><span id="printDay"></span></p>
                     <p><strong>Horário: </strong><select name="hours">
-                        <option value="19:30">19:30</option>
-                        <option value="19:40">19:40</option>
-                        <option value="19:50">19:50</option>
-                        <option value="20:00">20:00</option>
-                        <option value="20:10">20:10</option>
-                        <option value="20:20">20:20</option>
-                        <option value="20:30">20:30</option>
-                        <option value="20:40">20:40</option>
-                        <option value="20:50">20:50</option>
-                        <option value="21:00">21:00</option>
-                        <option value="21:10">21:10</option>
-                        <option value="21:20">21:20</option>
-                        <option value="21:30">21:30</option>
-                    </select></p>
+                            <option value="19:30">19:30</option>
+                            <option value="19:40">19:40</option>
+                            <option value="19:50">19:50</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:10">20:10</option>
+                            <option value="20:20">20:20</option>
+                            <option value="20:30">20:30</option>
+                            <option value="20:40">20:40</option>
+                            <option value="20:50">20:50</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:10">21:10</option>
+                            <option value="21:20">21:20</option>
+                            <option value="21:30">21:30</option>
+                        </select></p>
                     <button onclick="closeModal()">Comprar passagem</button>
                 </div>
                 <div class="lugar">
@@ -249,8 +258,13 @@
 
     <!-- Conteudo principal -->
 
-    <section class="main-principal">
+    <section id="banner-covid">
+        <div id="item1"></div>
+        <p>Pensando na saúde de todos, solicitamos o uso de máscara.</p>
+        <a href="covid.html">Clique aqui</a>
+    </section>
 
+    <section class="main-principal">
         <main>
             <img src="../images/estacoes.jpg">
 
@@ -258,41 +272,41 @@
 
                 <h1>Estações</h1>
 
-                <p>O Ramal Saracuruna possui 20 estações partindo da estação de Sacaruruna e terminando na Central do
-                    Brasil. <br><br>
+                <p>O Ramal Saracuruna possui 20 estações partindo da estação de Sacaruruna e terminando na Central do Brasil. Veja todas as informações sobre as estações e horário de funcionamento em saiba mais.<br><br><br>
                     <strong>Horário de funcionamento:</strong> <br>
                     <strong>Dias úteis:</strong> das 4h16 às 21h59 <br>
                     <strong>Sábados:</strong> das 4h19 às 21h <br>
                     <strong>Domingos e feriados:</strong> das 4h53 às 19h33</p><br>
 
-                <a href="station.html">Saiba mais<i class="fas fa-arrow-right" id="item2"></i></a>
+                <a href="station.html">Saiba mais<i class="fas fa-arrow-right"></i></a>
             </div>
         </main>
+        <div id="item2"></div>
 
         <main>
             <img src="../images/tiket.jpg">
 
-            <div class="description">
-                <h1>Rewards</h1>
-                <p>Aqui você pode acompanhar sua pontuação!<br><br>
-                    A cada compra você ganha 10 pontos<br> 
-                    Na soma de 150 pontos, ganha um bilhete grátis!<br>
-                    <strong>Sua pontuação atual é: <span id="reward">0</span></strong></p><br><br>
+            <div class="description rewardd">
+                <h1 class="rewardH1">Rewards</h1>
+                <strong class="points">Sua pontuação atual é: <span id="reward">0</span></strong><br><br>
 
-                    <a href="#">Troque seus pontos<i class="fas fa-arrow-right"></i></a>
+                <p>Sua pontuação é calculada de acordo com o seu comprometimento em cumprir as regras. Serão pontuados a compra do bilhete, check-in e check-out nas estações informadas dentro do sistema. Sua pontuação pode ser trocada por bilhetes futuramente, ou por produtos de lojas dos nossos parceiros.</p>
+                <p>Ah, fique atento, se descumprir qualquer uma das informações sobre embarque e desembarque, você pode perder uma parte dos seus pontos. Não se assuste, isso é somente para manter o melhor atendimento a todos os nossos amigos passageiros!</p>
+                <p class="final">Não se esqueça, quanto mais você usar o walkpass, mais pontos você terá! <strong>Boaviagem!</strong></p>
+                
+
+                <!-- <a href="#">Troque seus pontos<i class="fas fa-arrow-right"></i></a> -->
             </div>
         </main>
 
     </section>
 
     <section id="back">
-
         <div class="back-compra">
             <h2>Todos a bordo!</h2>
             <p>Você vai adorar o conforte de comprar bilhetes online.</p>
             <button onclick="window.location.href = '#top'" id="item3">RESERVAR UM BILHETE</button>
         </div>
-
     </section>
 
     <section class="main-principal">
@@ -340,21 +354,6 @@
         </address>
     </footer>
 
+    <script src="../script.js"></script>
 </body>
-
-<script>
-    $(function date() {
-        $(".calendario").datepicker({
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            today: new Date,
-            minDate: new Date,
-            dateFormat: 'dd/mm/yy',
-            dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-            dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-            monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        });
-    }); 
-</script>
-<script src="../script.js"></script>
 </html>

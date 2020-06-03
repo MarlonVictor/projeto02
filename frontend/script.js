@@ -82,11 +82,11 @@ const printDay = document.getElementById('printDay');
 const printReward = document.getElementById('reward');
 let pontos = 0;
 
-document.querySelector('#item1').addEventListener('click', function() {
+function printData() {
   printPartida.innerHTML = partida.value;
   printChegada.innerHTML = chegada.value;
   printDay.innerHTML = day.value;
-})
+}
 
 // Modal de compra
 
@@ -104,3 +104,16 @@ function closeModal() {
   pontos = pontos + 10;
   printReward.innerHTML = pontos;
 }
+
+// Animation
+const target = document.querySelectorAll('[data-anime]');
+
+window.addEventListener('scroll', function() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    target.forEach(function(e) {
+        if(windowTop > e.offsetTop) 
+            e.classList.add('animate');
+        else 
+            e.classList.remove('animate');
+    })
+})

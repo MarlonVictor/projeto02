@@ -1,0 +1,139 @@
+#pag-covid .banner {
+    height: 250px;
+    background-image: url("https://images.pexels.com/photos/4429297/pexels-photo-4429297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position-y: -130px;
+}
+#covid {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+#covid .center {
+    text-align: center;
+    max-width: 70%;
+    margin: 20px auto;
+}
+
+#covid .center h1 {
+    color: #00958E;
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+#covid .center p {
+    margin: 0 auto 50px;
+    max-width: 70%;
+    filter: opacity(70%);
+    font-size: 15px;
+    letter-spacing: 1px;
+} 
+
+#covid .content p {
+    padding: 15px 0;
+    font-weight: 300;
+    text-indent: 30px;
+    letter-spacing: 0.5px;
+}
+
+#covid .content p.background {
+    background-color: #f0f0f5;
+    text-align: center;
+    text-indent: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 25px 0;
+}
+
+#covid .content .animation {
+    display: flex;
+    margin: 25px 0;
+}
+
+#covid .content .animation p {
+    line-height: 30px;
+    text-indent: 0;
+    padding-left: 20px;
+}
+
+#covid .content span img {
+    width: 100px;
+    height: 100px;
+    box-shadow: none;
+}
+
+#covid .content .flex-box {
+    display: flex;
+    background-color: #f0f0f5;
+    align-items: center;
+}
+
+#covid .content .flex-box p {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    padding: 0 20px;
+    text-indent: 0;
+    text-align: justify;
+}
+
+[data-anime="left"] {
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(-1000px, 0, 0);
+}
+[data-anime="right"] {
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(5px, 0, 0);
+}
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 900px) {
+    #covid {
+        max-width: 95%;
+    }
+    #covid .content .animation p {
+        line-height: normal;
+        padding-left: 20px;
+    }
+    #covid .content .flex-box p {
+        line-height: normal;
+    }
+    #covid .content .flex-box img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 670px) {
+    #pag-covid .banner {
+        background-position-y: -30px;
+        background-repeat: no-repeat;
+    }
+    #covid .center {
+        max-width: 100%;
+    }
+    
+    #covid .content .flex-box {
+        flex-direction: column;
+    }
+    #covid .content .flex-box p, #covid .content .flex-box img {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 420px) {
+    #covid .content span img {
+        position: relative;
+        top: 70px;
+    }
+    #covid .content .flex-box img {
+        width: 80%;
+    }
+}

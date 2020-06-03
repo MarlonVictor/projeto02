@@ -277,7 +277,7 @@ header a img {
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
 }
 
-input#item1 {
+input#itemm1 {
     margin: 2% auto 4%;
     padding: 2%;
     width: 50%;
@@ -504,9 +504,36 @@ main .lugar {
 
 /* Conteudo principal */
 
+#banner-covid {
+    margin-top: 70px;
+    background: rgb(3,135,165);
+    background: linear-gradient(90deg, rgba(3,135,165,1) 0%, rgba(3,135,165,1) 30%, rgba(0,149,142,1) 70%);
+    color: #fff;
+    font-weight: 900;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+#banner-covid a {
+    padding: 2px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 2%;
+    border: 2px solid #fff;
+}
+
+#banner-covid a:hover {
+    background-color: #fff;
+    color: #00958E;
+}
+
 .main-principal {
     width: 92%;
-    margin: 60px auto;
+    margin: -45px auto 50px;
 }
 
 main {
@@ -521,6 +548,7 @@ main img {
     width: 600px;
     border-radius: 5px 0 0 5px;
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
+    object-fit: cover;
 }
 
 .description {  
@@ -540,16 +568,36 @@ main img {
     font-size: 18px;
 }
 
+.description.rewardd p {
+    font-size: 18px;
+}
+
+.description.rewardd .points {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.description.rewardd p.final {
+    padding-top: 20px;
+    text-indent: 0;
+} 
+
 .description a{
     text-decoration: none;
     color: #00958E;
     font-size: 18px;
     font-weight: bold;
+    display: block;
+    margin-top: 30px;
 }
 
 .description a:hover .fas{
     margin-left: 20px;
     transition: 300ms;
+}
+
+.description h1.rewardH1 {
+    padding: 0 0 5px 20px;
 }
 
 /* btn voltar para compra */
@@ -657,19 +705,6 @@ hr {
     margin-bottom: 7px;
 }
 
-/* Calendário */
-
-.ui-datepicker .ui-datepicker-header {
-    background: #00958E;
-    color: #fff;
-    height: 38px;
-}
-
-.ui-datepicker .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-prev:hover {
-    background: #00958E;
-    filter: brightness(110%);
-}
-
 /* Responsividade */
 
 @media (max-width: 980px) {
@@ -774,6 +809,14 @@ hr {
     #buy button {
         font-size: 16px;
     }
+    #banner-covid {
+        font-size: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    #banner-covid a {
+        margin-top: 10px;
+    }
     .description p {
         text-indent: 12px;
         font-size: 16px;
@@ -797,10 +840,14 @@ hr {
         width: 120px;
     }
     #top-nav a {
-        margin-left: 5px;
+        margin-left: -8px;
     }
+    .description.rewardd .points, .description h1.rewardH1 {
+        padding: 5px 0;
+    } 
     .description {
         padding: 30px;
+        line-height: 22px;
     }
     #modal {
         height: 1000px;
