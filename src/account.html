@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../css/account.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/account.css" type="text/css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2836/2836271.svg">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -13,12 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <script src="../script.js" defer></script>
     <title>Minha conta - Walkpass</title>
-
 </head>
 
 <body style="background-color:#f3f3f3">
     <header>
-        <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+        <a href="inicio.html"><img src="../../public/assets/logo.png" alt="Logomarca"></a>
         <nav>
             <div class="search-box">
                 <input class="search-txt" type="text" name="search" placeholder=" Pesquisar">
@@ -26,15 +26,18 @@
                     <i class="fas fa-search"></i>
                 </a>
             </div>
-
-            <div class="menu">
-                <img src="../images/rosto.jpg">
-                <p>Marlon</p>
-                <span class="tooltip">
-                    <a href="account.html">Minha conta</a>
-                    <a href="index.html">Sair</a>
-                </span>
-            </div>
+            <ul class="menu">
+                <li>
+                    <div class="content">
+                        <img src="../../public/assets/rosto.jpg">
+                        <p id="nome">Marlon</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="account.html">Minha conta</a></li>
+                        <li><a href="index.html">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -92,11 +95,14 @@
             <div id="out" data-tab-content>
                 <h2>Tem certeza que deseja sair da conta?</h2>
                 <p><button onclick="window.location.href = 'index.html'">Sair</button>
-                    <a href="inicio.html">voltar para página principal</a></p>
+                    <a href="inicio.html">voltar para página principal</a>
+                </p>
             </div>
 
         </div>
     </div>
-</body>
 
+    <script src="../public/scripts/elements.js"></script>
+    <script src="../public/scripts/account.js"></script>
+</body>
 </html>

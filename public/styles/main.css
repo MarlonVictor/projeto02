@@ -48,7 +48,7 @@ strong {
 }
 
 #container-top { /*img de fundo*/
-    background-image: url("../images/topo.jpg");
+    background-image: url("../assets/topo.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -119,8 +119,10 @@ header a img {
 .menu {  /* Minha conta */
     display: flex;
     align-items: center;
-    padding: 14px 34.5px; 
+    justify-content: center;
+    position: relative;
     transition: 200ms;
+    padding: 14px 34.5px; 
 }
 
 .menu:hover {
@@ -135,31 +137,41 @@ header a img {
     border-radius: 50%;
 }
 
-.tooltip {
+.menu p {
+    font-size: 16px;
+}
+
+.menu .content {
+    display: flex;
+    align-items: center;
+}
+
+.menu .list {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    margin-top: 74px;            
-    width: 169px;
-    right: 10%;
-    background-color: #00958E;
     text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #00958E;
+    transform: translateY(13px);
     visibility: hidden;
 }
-
-.tooltip a {
-    padding: 10px 0;
-    font-size: 16px;
-    color: white;
-    border-top: 1px solid rgb(0, 134, 128);
+.menu:hover .list {
+    visibility: visible;
 }
 
-.tooltip a:hover {
+.menu .list li {
+    padding: 10px 0;
+    border-top: 1px solid rgb(0, 134, 128);
+}
+.menu .list li:hover {
     background-color: rgb(0, 134, 128);
 }
 
-.menu:hover .tooltip {
-    visibility: visible;
+.menu .list li a {
+    color: white;
+    font-size: 15px;
 }
 
 #top-nav {  /* Atalhos */
@@ -242,7 +254,7 @@ header a img {
 }
 
 .numero {
-    width: 25%;
+    width: 30%;
     background-color: #201E1E;
     float: right;
     position: relative;
@@ -582,6 +594,10 @@ main img {
     text-indent: 0;
 } 
 
+.description.rewardd p.final strong {
+    padding-left: 10px;
+}
+
 .description a{
     text-decoration: none;
     color: #00958E;
@@ -603,7 +619,7 @@ main img {
 /* btn voltar para compra */
 
 #back {
-    background-image: url("../images/back.jpg");
+    background-image: url("../assets/back.jpg");
     background-size: 102%;
     background-position: center;
     background-attachment: fixed;   
@@ -809,6 +825,7 @@ hr {
     #buy button {
         font-size: 16px;
     }
+    
     #banner-covid {
         font-size: 15px;
         flex-direction: column;
@@ -863,5 +880,14 @@ hr {
     }
     footer .logo {
         display: none;
+    }
+}
+
+@media (max-width: 335px) {
+    .menu {
+        padding: 14px 20px;
+    }
+    .tooltip{
+        width: 140px;
     }
 }

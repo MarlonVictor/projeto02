@@ -7,7 +7,7 @@
 #account aside {
     display: block;
     width: 80%;
-    height: 235px;
+    height: 250px;
     box-shadow: 0 4px 16px rgba(1, 1, 1, 0.1);
     background-color: white;
 }
@@ -59,6 +59,7 @@
 #account_cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .account_card {
@@ -138,9 +139,15 @@ label {
     } 
 }
 
+@media (max-width: 915px) {
+    #account aside {
+        height: 275px;
+    }
+}
+
 @media (max-width: 850px) {
     #account aside {
-        height: 255px;
+        height: 280px;
     }
     #conta {
         margin-right: 5%;
@@ -165,9 +172,6 @@ label {
         font-size: 20px;
         width: 200px;
     }
-}
-
-@media (max-width: 590px) {
     #account aside {
         height: 255px;
     }
@@ -175,9 +179,6 @@ label {
         width: 250px;
         font-size: 15px;
     }
-} 
-
-@media (max-width: 480px) {
     #account {
         display: block;
     }
@@ -195,9 +196,11 @@ label {
         width: 550px;
     }
     .tab.active {
-        padding: 40px 5px;
         border-right:none;
         border-bottom: 5px solid #00958E;
+    }
+    .tab.active:nth-child(1), .tab.active:nth-child(3) {
+        padding: 40px 5px;
     }
     #conta, #dados, #out {
         margin: 50px auto 0;
@@ -210,9 +213,14 @@ label {
         margin-right: 5px;
     }
     #out a {
-        font-size: 12px;
+        font-size: 13px;
         position: absolute;
         bottom: 50px;
-        left: 85px;
+        left: 50%;
+        transform: translateX(-50%);
     }
+} 
+
+@media (max-width: 480px) {
+    
 }

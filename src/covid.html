@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../css/covid.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/covid.css" type="text/css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2836/2836271.svg">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Estações - WalkPass</title>
 </head>
 
 <body id="pag-covid">
 
     <header>
-        <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+        <a href="inicio.html"><img src="../../public/assets/logo.png" alt="Logomarca"></a>
 
         <nav>
             <div class="search-box">
@@ -27,14 +29,18 @@
                 </a>
             </div>
 
-            <div class="menu">
-                <img src="../images/rosto.jpg">
-                <p>Marlon</p>
-                <span class="tooltip">
-                    <a href="account.html">Minha conta</a>
-                    <a href="index.html">Sair</a>
-                </span>
-            </div>
+            <ul class="menu">
+                <li>
+                    <div class="content">
+                        <img src="../../public/assets/rosto.jpg">
+                        <p id="nome">Marlon</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="account.html">Minha conta</a></li>
+                        <li><a href="index.html">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -68,14 +74,14 @@
 
             <div class="flex-box" data-anime="right">
                 <p>Com mais essa atitude temos a certeza de que estamos contribuindo para que a sociedade brasileira promova um enfrentamento não somente eficaz, mas também alinhado com nossa maneira de ser: simples, humana e inteligente.</p>
-                <img src="https://images.pexels.com/photos/3962264/pexels-photo-3962264.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <img src="../public/assets/covid.webp">
             </div>
         </div>
     </main>
 
     <footer>
-        <img class="line" src="../images/footer.png">
-        <img class="logo" src="../images/logo (2).png" alt="Logo">
+        <img class="line" src="../../public/assets/footer.png">
+        <img class="logo" src="../../public/assets/logo.png" alt="Logo">
 
         <div class="sobre">
             <h3>Sobre o sistema:</h3>
@@ -99,6 +105,7 @@
         </address>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../public/scripts/elements.js"></script>
+    <script src="../public/scripts/animation.js"></script>
 </body>
 </html>

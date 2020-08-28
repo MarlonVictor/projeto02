@@ -3,15 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/main.css" type="text/css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2836/2836271.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- DatePicker -->
-    
     <title>WalkPass</title>
 </head>
 
@@ -19,7 +18,7 @@
     <div id="container-top">
 
         <header>
-            <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+            <a href="inicio.html"><img src="../../public/assets/logo.png" alt="Logomarca"></a>
 
             <nav>
                 <div class="search-box">
@@ -29,14 +28,18 @@
                     </a>
                 </div>
 
-                <div class="menu">
-                    <img src="../images/rosto.jpg">
-                    <p id="nome">Marlon</p>
-                    <span class="tooltip">
-                        <a href="account.html">Minha conta</a>
-                        <a href="index.html">Sair</a>
-                    </span>
-                </div>
+                <ul class="menu">
+                    <li>
+                        <div class="content">
+                            <img src="../../public/assets/rosto.jpg">
+                            <p id="nome">Marlon</p>
+                        </div>
+                        <ul class="list">
+                            <li><a href="account.html">Minha conta</a></li>
+                            <li><a href="index.html">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </header>
 
@@ -266,7 +269,7 @@
 
     <section class="main-principal">
         <main>
-            <img src="../images/estacoes.jpg">
+            <img src="../../public/assets/estacoes.jpg">
 
             <div class="description">
 
@@ -284,7 +287,7 @@
         <div id="item2"></div>
 
         <main>
-            <img src="../images/tiket.jpg">
+            <img src="../../public/assets/tiket.jpg">
 
             <div class="description rewardd">
                 <h1 class="rewardH1">Rewards</h1>
@@ -294,8 +297,6 @@
                 <p>Ah, fique atento, se descumprir qualquer uma das informações sobre embarque e desembarque, você pode perder uma parte dos seus pontos. Não se assuste, isso é somente para manter o melhor atendimento a todos os nossos amigos passageiros!</p>
                 <p class="final">Não se esqueça, quanto mais você usar o walkpass, mais pontos você terá! <strong>Boaviagem!</strong></p>
                 
-
-                <!-- <a href="#">Troque seus pontos<i class="fas fa-arrow-right"></i></a> -->
             </div>
         </main>
 
@@ -312,7 +313,7 @@
     <section class="main-principal">
 
         <main>
-            <img src="../images/catraca.jpg" alt="">
+            <img src="../../public/assets/catraca.jpg" alt="">
 
             <div class="description">
                 <h1>WalkPass</h1>
@@ -329,8 +330,8 @@
     <!-- Footer da pagina -->
 
     <footer>
-        <img class="line" src="../images/footer.png">
-        <img class="logo" src="../images/logo (2).png" alt="Logo">
+        <img class="line" src="../../public/assets/footer.png">
+        <img class="logo" src="../../public/assets/logo.png" alt="Logo">
 
         <div class="sobre">
             <h3>Sobre o sistema:</h3>
@@ -354,6 +355,7 @@
         </address>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../public/scripts/elements.js"></script>
+    <script src="../public/scripts/cart.js"></script>
 </body>
 </html>

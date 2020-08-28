@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
-    <!-- Icons --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/styles/login.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2836/2836271.svg">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Login - Walkpass</title> 
 </head>
 
@@ -13,9 +15,8 @@
 <body id="pag-login"> 
    
     <section class="container">
-
         <div id="sobre">
-            <img src="../images/logo.png">
+            <img src="../../public/assets/logo.png">
             <p>Sistema desenvolvido com a finalidade de agilizar a venda dos bilhetes,
             reduzir a super lotação nos vagãos e diminuir o tempo gasto dentro do mesmo.</p>
         </div>
@@ -27,13 +28,13 @@
                 
                 <form name=login>
                     <fieldset>
-                        <input type="text" id=username placeholder="Username" maxlength="20" autocomplete="off">
+                        <input type="text" id="username" placeholder="Username" maxlength="20" autocomplete="off">
                     </fieldset>
 
                     <fieldset >
-                        <input type="password" id=password placeholder="Senha" maxlength="12">
+                        <input type="password" id="password" placeholder="Senha" maxlength="12">
                         <div id="show" onclick="showPassword()"></div>
-                    </fieldset>               
+                    </fieldset>
                 </form> 
 
                 <div class="btn">               
@@ -45,7 +46,6 @@
     </section>
 
     <!-- Cadastro -->
-
     <div id="modal" class="hide">
         <div id="form">
             <div class="cadastro">
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <script src="../script.js"></script>
-
+    <script src="../public/scripts/elements.js"></script>
+    <script src="../public/scripts/login.js"></script>
 </body>
-</html> 
+</html>

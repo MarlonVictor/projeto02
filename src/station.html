@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../css/station.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../../public/styles/station.css" type="text/css">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2836/2836271.svg">
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -17,7 +18,7 @@
 <body>
 
     <header>
-        <a href="inicio.html"><img src="../images/logo.png" alt="Logomarca"></a>
+        <a href="inicio.html"><img src="../../public/assets/logo.png" alt="Logomarca"></a>
 
         <nav>
             <div class="search-box">
@@ -27,14 +28,18 @@
                 </a>
             </div>
 
-            <div class="menu">
-                <img src="../images/rosto.jpg">
-                <p>Marlon</p>
-                <span class="tooltip">
-                    <a href="account.html">Minha conta</a>
-                    <a href="index.html">Sair</a>
-                </span>
-            </div>
+            <ul class="menu">
+                <li>
+                    <div class="content">
+                        <img src="../../public/assets/rosto.jpg">
+                        <p id="nome">Marlon</p>
+                    </div>
+                    <ul class="list">
+                        <li><a href="account.html">Minha conta</a></li>
+                        <li><a href="index.html">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -43,7 +48,7 @@
     </div>
 
     <div class="banner">
-        <img src="../images/banner-estacoes.jpg">
+        <img src="../../public/assets/banner-estacoes.jpg">
         <p>RAMAL SARACURUNA</p>
         <h2>Conheça as Estações:</h2>
     </div>
@@ -52,8 +57,8 @@
         <div class="estacoes">
 
             <div class="title">
-                <h2 id="sense">Sentido: Saracuruna (20 pontos) </h2>
-                <button onclick="change()">Trocar Sentido</button>
+                <h2 id="way">Sentido: Saracuruna (20 pontos) </h2>
+                <button onclick="changeWay()">Trocar Sentido</button>
             </div>
 
             <div class="line">
@@ -255,8 +260,8 @@
     </div>
 
     <footer>
-        <img class="line" src="../images/footer.png">
-        <img class="logo" src="../images/logo (2).png" alt="Logo">
+        <img class="line" src="../../public/assets/footer.png">
+        <img class="logo" src="../../public/assets/logo.png" alt="Logo">
 
         <div class="sobre">
             <h3>Sobre o sistema:</h3>
@@ -280,7 +285,7 @@
         </address>
     </footer>
 
-    <script src="../script.js"></script>
-
+    <script src="../public/scripts/elements.js"></script>
+    <script src="../public/scripts/animation.js"></script>
 </body>
 </html>
