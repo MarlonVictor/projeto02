@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/netlify/ca356191-4ae1-46d2-afbf-80c5671d3018?color=%230387A5&logo=Netlify&style=flat-square">
   <img src="https://img.shields.io/github/repo-size/MarlonVictor/uniPCA?color=%230387A5&logo=GitHub&style=flat-square">
-  <img src="https://img.shields.io/github/stars/MarlonVictor/uniPCA?color=%230387A5&logo=github&style=flat-square">
   <img src="https://img.shields.io/github/forks/MarlonVictor/uniPCA?color=%230387A5&logo=GitHub&style=flat-square">
   <img src="https://img.shields.io/github/license/MarlonVictor/uniPCA?color=%230387A5&style=flat-square">
 </p>
@@ -28,9 +28,9 @@ Temos o botão de compra, onde é informado o ponto de partida e o de chegada, a
 </p>
 
 ## Acesse
-* Link do projeto: [WalkPass](https://marlonvictor.github.io/uniPCA/src/index.html)
-* Username = Danilo 
-* Senha = Marlon
+* Link do projeto: [WalkPass](https://walkpass.netlify.app/src/)
+* Username: Danilo 
+* Senha: Marlon
 
 ## Como Rodar
 * Faça o clone/download desse repositório
